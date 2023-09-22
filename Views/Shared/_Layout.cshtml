@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - REATTEN</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Trabajo_Grupal.styles.css" asp-append-version="true" />
 </head>
@@ -42,10 +43,64 @@
     </div>
 
     <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - Trabajo_Grupal - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        
+        <div class="footer-container">
+            
+            <div class="footer-row">
+
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="/Images/logo1.1.png" alt="">
+                    </div>
+                    <h6>Siguenos en nuestras redes sociales</h6>
+                    <div class="sIcons">
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+        
+                <div class="footer-col">
+                    <ul>
+                        <h4>Nosotros</h4>
+                        <li><a href="">Nuestra Empresa</a></li>
+                        <li><a href="">Dirección</a></li>
+                        <li><a href="">Contáctanos</a></li>
+                        <li><a href="">Preguntas Frecuentes</a></li>
+                    </ul>
+                            
+                </div>
+
+                <div class="footer-col">
+                    <h4>Libro de Reclamaciones</h4>
+                    <div class="footer-img">
+                        <a href="">
+                        <img src="/Images/reclamaciones.png" alt="">
+                        </a>
+                    </div>
+                    
+                </div>
+
+                <div class="footer-col">
+                    <h4>Medios de Pago</h4>
+                    <div class="footer-img">
+                        <img src="/Images/tarjetas.png" alt="">
+                    </div>
+                              
+                </div>   
+        
+            </div>
+   
         </div>
+
+        <div class="containerCopy">
+                        
+            <p>Copyright &copy;2023; Designed by <span class="designer">REATTEN</span> </p>
+                
+        </div>
+
     </footer>
+
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
