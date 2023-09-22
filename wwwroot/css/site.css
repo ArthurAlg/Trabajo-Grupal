@@ -15,4 +15,171 @@ html {
 
 body {
   margin-bottom: 60px;
+  background-color: #ffe58f;
 }
+
+/* ------------- CSS FOOTER -------------------*/
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-img img{
+  width: 50%;
+  padding-bottom: 15px;
+  vertical-align: middle;
+  
+}
+
+.footer-logo img{
+  width: 85%;
+  padding-bottom: 15px;
+  vertical-align: middle;
+  
+}
+
+ul{
+  list-style: none;
+}
+
+.footer {
+  background-color: #581908;
+  height: auto;
+  width: 100vw;
+  padding-top: 50px;
+  
+}
+
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+} 
+
+.footer-col {
+  width: 25%;
+  padding:0 25px;
+  padding-bottom: 50px ;
+  
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+  border-bottom: 2px solid #F5C116;
+  display: inline-block;
+  padding-bottom: 10px;
+  bottom: -10px;
+
+}
+
+
+.footer-col h6 {
+
+  font-size: 17px;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-weight: 300;
+  color: #ffffff;
+  display: block;
+  padding-bottom: 10px;
+}
+
+
+.footer-col ul li:not(:last-child){
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  font-size: 17px;
+  text-transform: capitalize;
+  color: #bbbbbb;
+  text-decoration: none;
+  font-weight: 300;
+  color: #ffffff;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover{
+  color: #F5C116;
+  padding-left: 8px;
+}
+
+.sIcons a{
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin:0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+
+.sIconsP a{
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  margin:0 0 20px ;
+  text-align: center;
+  line-height: 25px;
+  /*border-radius: 50%;*/
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+
+.sIcons a:hover {
+  background-color: #F5C116;
+}
+
+.containerCopy {
+  background-color: #6F1A07;
+  width: auto;
+  padding-top: 6px;
+  padding-bottom: 1px;
+  text-align: center;
+
+}
+
+.containerCopy p{
+  color: white;
+  
+}
+
+.designer{
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin: 0px 5px;
+}
+
+@media(max-width:991px){
+  .footer-row{
+    text-align: center;
+  }
+
+  .footer-col{
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .containerCopy{
+    text-align: center;
+  }
+}
+
+/*-------------- FOOTER --------------------------------*/
