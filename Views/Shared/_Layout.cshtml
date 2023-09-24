@@ -26,6 +26,9 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Nosotros" asp-action="Index">Privacy</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Contactanos" asp-action="Index">Contactame</a>
+                        </li>
                         <form method="post" class="searchForm" size="40">
                             <input type="text" name="searchString" />
                             <input type="submit" value="Search" />
@@ -64,7 +67,7 @@
                         <h4>Nosotros</h4>
                         <li><a asp-area="" asp-controller="Nosotros" asp-action="Index">Nuestra Empresa</a></li>
                         <li><a href="">Dirección</a></li>
-                        <li><a href="">Contáctanos</a></li>
+                        <li><a asp-area="" asp-controller="Contacto" asp-action="Index">Contáctanos</a></li>
                         <li><a href="">Preguntas Frecuentes</a></li>
                     </ul>
                             
