@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "d:\\Progra1\\Trabajo-Grupal\\Trabajo Grupal.csproj": {}
+    "C:\\Users\\yanne\\Documents\\GitHub\\Trabajo-Grupal\\Trabajo Grupal.csproj": {}
   },
   "projects": {
-    "d:\\Progra1\\Trabajo-Grupal\\Trabajo Grupal.csproj": {
+    "C:\\Users\\yanne\\Documents\\GitHub\\Trabajo-Grupal\\Trabajo Grupal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\Progra1\\Trabajo-Grupal\\Trabajo Grupal.csproj",
+        "projectUniqueName": "C:\\Users\\yanne\\Documents\\GitHub\\Trabajo-Grupal\\Trabajo Grupal.csproj",
         "projectName": "Trabajo Grupal",
-        "projectPath": "d:\\Progra1\\Trabajo-Grupal\\Trabajo Grupal.csproj",
-        "packagesPath": "C:\\Users\\aliag\\.nuget\\packages\\",
-        "outputPath": "d:\\Progra1\\Trabajo-Grupal\\obj\\",
+        "projectPath": "C:\\Users\\yanne\\Documents\\GitHub\\Trabajo-Grupal\\Trabajo Grupal.csproj",
+        "packagesPath": "C:\\Users\\yanne\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\yanne\\Documents\\GitHub\\Trabajo-Grupal\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\aliag\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\yanne\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -70,24 +72,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.21, 6.0.21]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[6.0.21, 6.0.21]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.21, 6.0.21]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.21, 6.0.21]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
