@@ -14,9 +14,255 @@ html {
 }
 
 body {
+  
   margin-bottom: 60px;
-  background-color: #ffe58f;
+  background-color: #f6f6ff;
+  
+  
 }
+
+:root{
+
+  --primary-color: #581908;
+
+  --background-color: #fff1e0;
+
+  --second-color: #F5C116;
+
+}
+
+/*-------------- CARRUSEL ----------------------*/
+.cotainer-carrusel{
+
+  text-align: center;
+
+}
+
+ 
+
+.carousel-inner{
+
+  background-color: var(--second-color);
+
+  padding: 0.5rem 0;
+
+  position: static;
+
+}
+
+ 
+
+.carousel-inner img{
+
+  align-items: center;
+
+  width: 15%;
+
+
+}
+/*-------------- CARRUSEL ----------------------*/
+
+/*-------------- CSS NAV ----------------------*/
+
+.header{
+
+  text-align: center;
+  background-color: var(--background-color);
+  color: #581908
+}
+  
+
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: space-between;
+
+}
+
+
+.container-hero{
+  background-color: var(--background-color);
+  
+}
+
+.hero{
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 0;
+}
+
+.container-logo {
+  position: static;
+  width: 20%;
+  vertical-align: middle;
+}
+
+ 
+.container-logo img{
+  position: static;
+  width: 80%;
+  padding-left: 1rem;
+}
+
+.container-user{
+
+  display: flex;
+
+  gap: 1rem;
+
+  cursor: pointer;
+
+  padding-right: 15px;
+
+}
+
+ 
+
+.fa-user{
+
+  font-size: 1.5rem;
+
+  color: var(--primary-color);
+
+  padding-right: 2.5rem;
+
+  border-right: 1px solid #e2e2e2e2;
+
+}
+
+ 
+
+.fa-cart-shopping{
+
+  font-size: 1.5rem;
+
+  color: var(--primary-color);
+
+  padding-left: 1rem;
+
+}
+
+
+.searchForm{
+
+  display: flex;
+
+  align-items: center;
+
+  border: 2px solid #581908;
+
+  border-radius: 3rem;
+
+  background-color: #fff;
+
+  height: 2.5rem;
+
+  overflow: hidden;
+
+}
+
+ 
+
+.searchForm input{
+
+  outline: none;
+
+  border: none;
+
+  
+  font-size: 1.4rem;
+
+  padding: 20px 20px ;
+
+  color: 777;
+
+  cursor: pointer;
+
+}
+
+
+.searchForm input::-webkit-search-cancel-button{
+
+  appearance: none;
+
+}
+
+ 
+
+.searchForm .btn-search{
+
+  border: none;
+
+  background-color: var(--second-color);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  height: 100%;
+
+  padding: 1rem;
+
+}
+
+
+.navbar{
+  
+  text-align: center;
+  
+}
+
+.container-nav{
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: var(--background-color);
+  justify-content: space-between;
+}
+
+
+.collapse ul{
+  width: 100%;
+  align-content: center;
+  justify-content: space-around;
+  align-items: center;
+
+  
+}
+
+.dropdown-menu {
+  height: auto;
+  width: 90%;
+  background-color: var(--background-color) ;
+
+}
+
+.dropdown-menu a{
+  font-size: large;
+  text-wrap: wrap;
+}
+/*-------------- CSS NAV ----------------------*/
+
+/*-------------- CSS NAV MOBILE----------------------*/
+
+.header-mobile{
+  background-color: var(--background-color);
+  color: #581908
+}
+
+.container-nav-mobile{
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: var(--background-color);
+  border: var(--background-color);
+}
+
+
+/*-------------- CSS NAV MOBILE----------------------*/
 
 /* ------------- CSS FOOTER -------------------*/
 
@@ -54,7 +300,9 @@ ul{
   height: auto;
   width: 100vw;
   padding-top: 50px;
-  
+  margin-top: auto;
+  bottom: 0;
+  white-space: nowrap;
 }
 
 .footer-row {
@@ -75,7 +323,6 @@ ul{
   text-transform: capitalize;
   margin-bottom: 35px;
   font-weight: 500;
-  position: relative;
   border-bottom: 2px solid #F5C116;
   display: inline-block;
   padding-bottom: 10px;
@@ -167,6 +414,53 @@ ul{
   margin: 0px 5px;
 }
 
+/*-------------- FOOTER --------------------------------*/
+
+/*-------------- TAMAÑO --------------------------------*/
+
+@media (width>= 992px) {
+
+  .header-mobile{
+    display: none;
+  }
+
+  .header{
+    display: block;
+  }
+}
+
+
+@media (width<992px) {
+  .header{
+    display: none;
+  }
+
+  .header-mobile{
+    display: block;
+  }
+  
+ 
+
+  .navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .carousel-inner img{
+
+    align-items: center;
+  
+    width: 50%;
+  
+  }
+
+  
+
+}
+
+
 @media(max-width:991px){
   .footer-row{
     text-align: center;
@@ -180,6 +474,10 @@ ul{
   .containerCopy{
     text-align: center;
   }
+
+  .container-logo img{
+    width: 150%;
+  }
 }
 
-/*-------------- FOOTER --------------------------------*/
+/*-------------- TAMAÑO --------------------------------*/
