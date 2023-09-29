@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "D:\\Progra1\\Trabajo-Grupal\\Trabajo Grupal.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "D:\\Progra1\\Trabajo-Grupal\\Trabajo Grupal.csproj",
         "packagesPath": "C:\\Users\\aliag\\.nuget\\packages\\",
         "outputPath": "D:\\Progra1\\Trabajo-Grupal\\obj\\",
+=======
+    "c:\\Users\\yanne\\Documents\\GitHub\\Trabajo-Grupal\\Trabajo Grupal.csproj": {}
+  },
+  "projects": {
+    "c:\\Users\\yanne\\Documents\\GitHub\\Trabajo-Grupal\\Trabajo Grupal.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "c:\\Users\\yanne\\Documents\\GitHub\\Trabajo-Grupal\\Trabajo Grupal.csproj",
+        "projectName": "Trabajo Grupal",
+        "projectPath": "c:\\Users\\yanne\\Documents\\GitHub\\Trabajo-Grupal\\Trabajo Grupal.csproj",
+        "packagesPath": "C:\\Users\\yanne\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\yanne\\Documents\\GitHub\\Trabajo-Grupal\\obj\\",
+>>>>>>> c470757366cdad0f501c9b17a9889a641d2b5a27
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\aliag\\AppData\\Roaming\\NuGet\\NuGet.Config"

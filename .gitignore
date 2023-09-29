@@ -1,4 +1,4 @@
 Data/Migrations/
 appsettings.json
 bin/
-obj/
+obj/Debug/
