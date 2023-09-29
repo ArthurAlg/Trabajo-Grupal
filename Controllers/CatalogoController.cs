@@ -5,6 +5,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
+using Trabajo_Grupal.Data;
 
 namespace Trabajo_Grupal.Controllers
 {
@@ -12,14 +15,23 @@ namespace Trabajo_Grupal.Controllers
     {
         private readonly ILogger<CatalogoController> _logger;
 
-        public CatalogoController(ILogger<CatalogoController> logger)
+        private readonly ApplicationDbContext _context;
+
+        public CatalogoController(ApplicationDbContext context, ILogger<CatalogoController> logger)
         {
+            _context = context;
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index(string? searchString)
         {
-            return View();
+            var productos = from o in _context.DataProducto select o;
+
+            if(!String.IsNullOrEmpty(searchString)){
+                productos = productos.Where(s => s.Name.Contains(searchString));
+            }
+
+            return View(await productos.ToListAsync());
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

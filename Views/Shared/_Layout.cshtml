@@ -47,12 +47,10 @@
                     </form>
                 </div>
 
-                <div class="container-user">
-                    <a  asp-area="Identity" asp-page="/Account/Login" >
-                       <i class="fa-solid fa-user" ></i>
-                    </a>
+              <div class="container-user">
+                    <partial name="_LoginPartial" />
                     <i class="fa-solid fa-cart-shopping"></i>
-                </div>
+                </div>
             
             </div>
 
@@ -68,6 +66,9 @@
                             <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">LOS MÁS VENDIDOS</a>
                             </li>
+                            <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Catalogo" asp-action="Index">Catalogo</a>
+                        </li>
                             <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 FICCIÓN

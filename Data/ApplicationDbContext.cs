@@ -9,4 +9,7 @@ public class ApplicationDbContext : IdentityDbContext
         : base(options)
     {
     }
+public DbSet<Trabajo_Grupal.Models.Producto> DataProducto{get;set;}
+
+
 }
