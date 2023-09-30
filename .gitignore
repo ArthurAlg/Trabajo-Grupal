@@ -1,2 +1,8 @@
+Data/Migrations/
 bin/
 obj/
+obj/project.nuget.cache
+obj/Debug/net6.0/Trabajo Grupal.assets.cache
+obj/Debug/net6.0/Trabajo Grupal.GeneratedMSBuildEditorConfig.editorconfig
+obj/project.nuget.cache
+Debug/

@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Franco Sanchez\\Desktop\\PROYECTOGRUPAL\\Trabajo-Grupal\\Trabajo Grupal.csproj": {}
+    "c:\\Users\\yanne\\Documents\\GitHub\\Trabajo-Grupal\\Trabajo Grupal.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Franco Sanchez\\Desktop\\PROYECTOGRUPAL\\Trabajo-Grupal\\Trabajo Grupal.csproj": {
+    "c:\\Users\\yanne\\Documents\\GitHub\\Trabajo-Grupal\\Trabajo Grupal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Franco Sanchez\\Desktop\\PROYECTOGRUPAL\\Trabajo-Grupal\\Trabajo Grupal.csproj",
+        "projectUniqueName": "c:\\Users\\yanne\\Documents\\GitHub\\Trabajo-Grupal\\Trabajo Grupal.csproj",
         "projectName": "Trabajo Grupal",
-        "projectPath": "C:\\Users\\Franco Sanchez\\Desktop\\PROYECTOGRUPAL\\Trabajo-Grupal\\Trabajo Grupal.csproj",
-        "packagesPath": "C:\\Users\\Franco Sanchez\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Franco Sanchez\\Desktop\\PROYECTOGRUPAL\\Trabajo-Grupal\\obj\\",
+        "projectPath": "c:\\Users\\yanne\\Documents\\GitHub\\Trabajo-Grupal\\Trabajo Grupal.csproj",
+        "packagesPath": "C:\\Users\\yanne\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\yanne\\Documents\\GitHub\\Trabajo-Grupal\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Franco Sanchez\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\yanne\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -50,6 +52,12 @@
               "target": "Package",
               "version": "[6.0.20, )"
             },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.11, )"
+            },
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
               "version": "[6.0.20, )"
@@ -60,7 +68,7 @@
             },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
-              "version": "[6.0.2, )"
+              "version": "[7.0.4, )"
             }
           },
           "imports": [
@@ -82,7 +90,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.414\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
