@@ -1872,11 +1872,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\yanne\\Documents\\GitHub\\Trabajo-Grupal\\Trabajo Grupal.csproj",
+      "projectUniqueName": "c:\\Users\\yanne\\Documents\\GitHub\\Trabajo-Grupal\\Trabajo Grupal.csproj",
       "projectName": "Trabajo Grupal",
-      "projectPath": "C:\\Users\\yanne\\Documents\\GitHub\\Trabajo-Grupal\\Trabajo Grupal.csproj",
+      "projectPath": "c:\\Users\\yanne\\Documents\\GitHub\\Trabajo-Grupal\\Trabajo Grupal.csproj",
       "packagesPath": "C:\\Users\\yanne\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\yanne\\Documents\\GitHub\\Trabajo-Grupal\\obj\\",
+      "outputPath": "c:\\Users\\yanne\\Documents\\GitHub\\Trabajo-Grupal\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\yanne\\AppData\\Roaming\\NuGet\\NuGet.Config",
