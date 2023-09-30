@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\yanne\\Documents\\GitHub\\Trabajo-Grupal\\Trabajo Grupal.csproj": {}
+    "C:\\Users\\yanne\\Documents\\GitHub\\Trabajo-Grupal\\Trabajo Grupal.csproj": {}
   },
   "projects": {
-    "c:\\Users\\yanne\\Documents\\GitHub\\Trabajo-Grupal\\Trabajo Grupal.csproj": {
+    "C:\\Users\\yanne\\Documents\\GitHub\\Trabajo-Grupal\\Trabajo Grupal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\yanne\\Documents\\GitHub\\Trabajo-Grupal\\Trabajo Grupal.csproj",
+        "projectUniqueName": "C:\\Users\\yanne\\Documents\\GitHub\\Trabajo-Grupal\\Trabajo Grupal.csproj",
         "projectName": "Trabajo Grupal",
-        "projectPath": "c:\\Users\\yanne\\Documents\\GitHub\\Trabajo-Grupal\\Trabajo Grupal.csproj",
+        "projectPath": "C:\\Users\\yanne\\Documents\\GitHub\\Trabajo-Grupal\\Trabajo Grupal.csproj",
         "packagesPath": "C:\\Users\\yanne\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\yanne\\Documents\\GitHub\\Trabajo-Grupal\\obj\\",
+        "outputPath": "C:\\Users\\yanne\\Documents\\GitHub\\Trabajo-Grupal\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\yanne\\AppData\\Roaming\\NuGet\\NuGet.Config",

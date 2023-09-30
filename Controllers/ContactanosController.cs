@@ -27,7 +27,7 @@ namespace Trabajo_Grupal.Controllers
         [HttpPost]
         public IActionResult Create(Contacto objContacto)
         {
-            ViewData["Message"] = string.Concat("Se registro el contacto ",objContacto.Name);
+            ViewData["Message"] = string.Concat("Hola ",objContacto.Name, ", pronto nos estaremos poniendo en contacto contigo"); 
             return View("Index");
         }
 

@@ -1,69 +1,100 @@
 @model Contacto
 
-@{
-    ViewData["Title"] = "Contacto";
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Contactanos</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="~/css/contactanos.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Trabajo_Grupal.styles.css" asp-append-version="true" />
+</head>
 
 
-<style>
+<body class="contacto">
 
-.formulario {
-    background-color: rgb(236, 202, 48);
-    border: 1px solid #ccc;
-    padding: 20px;
-    max-width: 500px;
-    margin: 0 auto;
-    border-radius: 3%;
-}
+    <section class="contact">
 
-.titulo-formulario {
-    font-size: 24px;
-    font-weight: bold;
-}
+        <div class="content">
 
-.descripcion-formulario {
-    font-size: 16px;
-    color: #666;
-}
+            <h2 class="titulo-formulario">Contáctanos</h2>
+            <p class="descripcion-formulario">Envíanos un mensaje y nos pondremos en contacto contigo lo antes posible.</p>
 
-.form-control {
-    width: 100%;
-    height: 40px;
-    border-radius: 4px;
-}
-
-.btn {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 100%;
-    height: 40px;
-}
-</style>
-
-
-
-<div class="formulario text-center">
-    <h2 class="titulo-formulario">Contáctanos</h2>
-    <p class="descripcion-formulario">Envíanos un mensaje y nos pondremos en contacto contigo lo antes posible.</p>
-
-    <form asp-controller="Contactanos" asp-action="Create">
-        <div class="form-group">
-            <label asp-for="Name">Nombre:</label>
-            <input asp-for="Name" class="form-control" />
         </div>
-        <div class="form-group">
-            <label asp-for="Email">Email:</label>
-            <input asp-for="Email" class="form-control" />
+
+        <div class="container">
+
+            <div class="contactInfo">
+
+                <div class="box">
+                    <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>Direccion</h3>
+                        <p>Miraflores</p>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>Telefono</h3>
+                        <p>01 - 1234567</p>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>Email</h3>
+                        <p>reatten@gmail.com</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="formulario">
+
+                <form asp-controller="Contactanos" asp-action="Create">
+                    <div class="inputBox">
+                        <label asp-for="Name">Nombre:</label>
+                        <input type="text" required="required" asp-for="Name"  />
+                        <span>Nombre y Apellido completos</span>
+                    </div>
+                    <div class="inputBox">
+                        <label asp-for="Email">Email:</label>
+                        <input type="text" required="required" asp-for="Email" />
+                        <span>Correo</span>
+                    </div>
+                    <div class="inputBox">
+                        <label asp-for="Phone">Teléfono:</label>
+                        <input type="text" required="required" asp-for="Phone" />
+                        <span>Teléfono</span>
+                    </div>
+                    <div class="inputBox">
+                        <label asp-for="Question">Pregunta:</label>
+                        <textarea type="text" required="required" asp-for="Question" ></textarea>
+                        <span>Indicar su consulta</span>
+                    </div>
+                    <div class="inputBox">
+                        <button type="submit" >ENVIAR</button>
+                    </div>
+                    
+                </form>
+
+                <div class="mensaje">
+                        <h1>@ViewData["Message"]</h1>
+                </div>
+            
+            </div>
+
         </div>
-        <div class="form-group">
-            <label asp-for="Phone">Teléfono:</label>
-            <input asp-for="Phone" class="form-control" />
-        </div>
-        <div class="form-group">
-            <label asp-for="Question">Pregunta:</label>
-            <input asp-for="Question" class="form-control" />
-        </div>
-        <button type="submit" class="btn btn-primary">Enviar Consulta</button>
-    </form>
-    <h1>@ViewData["Message"]</h1>
-</div>
+        
+
+    </section>
+
+     <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+</body>
+</html>
