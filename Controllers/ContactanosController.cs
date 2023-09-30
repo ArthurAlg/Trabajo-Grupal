@@ -41,6 +41,6 @@ namespace Trabajo_Grupal.Controllers
         public IActionResult Error()
         {
             return View("Error!");
-        }
-    }
+        }
+    }
 }
