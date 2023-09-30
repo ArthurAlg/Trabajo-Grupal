@@ -1814,19 +1814,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Franco Sanchez\\.nuget\\packages\\": {}
+    "C:\\Users\\aliag\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Franco Sanchez\\Desktop\\PROYECTOGRUPAL\\Trabajo-Grupal\\Trabajo Grupal.csproj",
+      "projectUniqueName": "D:\\Progra1\\Trabajo-Grupal\\Trabajo Grupal.csproj",
       "projectName": "Trabajo Grupal",
-      "projectPath": "C:\\Users\\Franco Sanchez\\Desktop\\PROYECTOGRUPAL\\Trabajo-Grupal\\Trabajo Grupal.csproj",
-      "packagesPath": "C:\\Users\\Franco Sanchez\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Franco Sanchez\\Desktop\\PROYECTOGRUPAL\\Trabajo-Grupal\\obj\\",
+      "projectPath": "D:\\Progra1\\Trabajo-Grupal\\Trabajo Grupal.csproj",
+      "packagesPath": "C:\\Users\\aliag\\.nuget\\packages\\",
+      "outputPath": "D:\\Progra1\\Trabajo-Grupal\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Franco Sanchez\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\aliag\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -1886,6 +1886,24 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.21, 6.0.21]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[6.0.21, 6.0.21]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.21, 6.0.21]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.21, 6.0.21]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -1894,7 +1912,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.414\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
