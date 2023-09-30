@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dY0udiMSgGlXl4Xvt3jorVGyO7ACb8OHnz1ceWosoFMiDnnsHDEa89WITL60N6SGdJrwuHp/+4OjiyO0g4e2yg==",
+  "dgSpecHash": "X5ezV8BUdWwfJUmAFyOZX+L6kvIt/RZxdRihX+QUnWZvNu3QZXdsQt7aXMyr9SCzYyDRPUewoiXxRvQDpAApXA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\yanne\\Documents\\GitHub\\Trabajo-Grupal\\Trabajo Grupal.csproj",
+  "projectFilePath": "c:\\Users\\yanne\\Documents\\GitHub\\Trabajo-Grupal\\Trabajo Grupal.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\yanne\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\yanne\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.20\\microsoft.aspnetcore.cryptography.internal.6.0.20.nupkg.sha512",
