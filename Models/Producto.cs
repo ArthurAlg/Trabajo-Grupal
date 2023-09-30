@@ -12,14 +12,14 @@ namespace Trabajo_Grupal.Models
         public int Id { get; set; }
 
         [Column("name")]
-        public string Name {get; set; }
+        public string? Name {get; set; }
 
         [Column("descripcion")]
-        public string Descripcion { get; set;} 
+        public string? Descripcion { get; set;} 
         
         [Column("precio")]
         public Decimal Precio { get; set;}
 
-        public string ImageName { get; set;}
+        public string? ImageName { get; set;}
     }
 }
