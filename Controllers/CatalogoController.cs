@@ -14,7 +14,6 @@ namespace Trabajo_Grupal.Controllers
     public class CatalogoController : Controller
     {
         private readonly ILogger<CatalogoController> _logger;
-        private readonly ApplicationDbContext _context;
 
         private readonly ApplicationDbContext _context;
 
@@ -22,7 +21,6 @@ namespace Trabajo_Grupal.Controllers
         {
             _context = context;
             _logger = logger;
-            _context = context;
         }
 
         public async Task<IActionResult> Index(string? searchString)
@@ -40,6 +38,6 @@ namespace Trabajo_Grupal.Controllers
         public IActionResult Error()
         {
             return View("Error!");
-        }
-    }
+        }
+    }
 }
