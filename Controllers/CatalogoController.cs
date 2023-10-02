@@ -23,15 +23,9 @@ namespace Trabajo_Grupal.Controllers
             _logger = logger;
         }
 
-        public async Task<IActionResult> Index(string? searchString)
-        {
+        public IActionResult Index() {
             var productos = from o in _context.DataProducto select o;
-
-            if(!String.IsNullOrEmpty(searchString)){
-                productos = productos.Where(s => s.Name.Contains(searchString));
-            }
-
-            return View(await productos.ToListAsync());
+            return View(productos.ToList());
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
