@@ -1,64 +1,98 @@
 @model Contacto
 
-@{
-    ViewData["Title"] = "Contacto";
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Contactanos</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="~/css/contactanos.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Trabajo_Grupal.styles.css" asp-append-version="true" />
+</head>
 
-<style>
-.formulario {
-    background-color: rgb(236, 202, 48);
-    border: 1px solid #ccc;
-    padding: 20px;
-    max-width: 500px;
-    margin: 0 auto;
-    border-radius: 3%;
-}
+<body>
+    
 
-.titulo-formulario {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.descripcion-formulario {
-    font-size: 16px;
-    color: #666;
-}
-
-.form-control {
-    width: 100%;
-    height: 40px;
-    border-radius: 4px;
-}
-
-.btn {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 100%;
-    height: 40px;
-}
-</style>
-<div class="formulario text-center">
-    <h2 class="titulo-formulario">Contáctanos</h2>
-    <p class="descripcion-formulario">Envíanos un mensaje y nos pondremos en contacto contigo lo antes posible.</p>
-
-    <form asp-controller="Contactanos" asp-action="Create">
-        <div class="form-group">
-            <label asp-for="Name">Nombre:</label>
-            <input asp-for="Name" class="form-control" />
+    <div class="contactUs">
+        <div class="title">
+            <h2 class="titulo-formulario">Contáctanos</h2>
         </div>
-        <div class="form-group">
-            <label asp-for="Email">Email:</label>
-            <input asp-for="Email" class="form-control" />
+        <div class="box">
+            <div class="contact form">
+                <h3>Envíanos un mensaje y nos pondremos en contacto contigo lo antes posible.</h3>
+                <form asp-controller="Contactanos" asp-action="Create">
+                    <div class="formBox">
+
+                        <div class="row100">
+                            <div class="inputBox">
+                                <label asp-for="Name">Nombre:</label>
+                                <input asp-for="Name"  />
+                            </div>
+                        </div>
+
+                        <div class="row50">
+                            <div class="inputBox">
+                                <label asp-for="Email">Email:</label>
+                                <input asp-for="Email" />
+                            </div>
+                            <div class="inputBox">
+                                <label asp-for="Phone">Teléfono:</label>
+                                <input asp-for="Phone"  />
+                            </div>
+                        </div>
+
+                        <div class="row100">
+                            <div class="inputBox">
+                                <label asp-for="Question">Consulta:</label>
+                                <textarea asp-for="Question"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="row100">
+                            <div class="inputBox">
+                                <button type="submit">Enviar Consulta</button>
+                            </div>
+                           
+                        </div>
+
+                        <div class="row100">
+                            <div class="inputBox">
+                                <h1>@ViewData["Message"]</h1>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="contact info">
+                <h3>Contact Center</h3>
+                <div class="infoBox">
+                    <div>
+                        <span><i class="fa-solid fa-location-dot"  style="color: #ffffff;"></i></span>
+                        <a href="#">La Molina</a>
+                    </div>
+                    <div>
+                        <span><i class="fa-solid fa-phone" style="color: #ffffff;"></i></span>
+                        <a href="#">+51 945 356 000</a>
+                    </div>
+                    <div>
+                        <span><i class="fa-solid fa-envelope" style="color: #ffffff;"></i></span>
+                        <a href="#">reatten@gmail.com</a>
+                    </div>
+                    <ul class="sci">
+                        <li><a href="#"><i class="fa-brands fa-facebook" style="color: #000000;"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-instagram" style="color: #000000;"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="contact map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62421.215916436304!2d-76.97113079135893!3d-12.089820774257296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c72728f1e9c3%3A0xe561ad9645daa02c!2sLa%20Molina!5e0!3m2!1ses!2spe!4v1696249604010!5m2!1ses!2spe" 
+                 style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </div>
-        <div class="form-group">
-            <label asp-for="Phone">Teléfono:</label>
-            <input asp-for="Phone" class="form-control" />
-        </div>
-        <div class="form-group">
-            <label asp-for="Question">Pregunta:</label>
-            <input asp-for="Question" class="form-control" />
-        </div>
-        <button type="submit" class="btn btn-primary">Enviar Consulta</button>
-    </form>
-    <h1>@ViewData["Message"]</h1>
-</div>
+
+    </div>
+
+</body>
+</html>
