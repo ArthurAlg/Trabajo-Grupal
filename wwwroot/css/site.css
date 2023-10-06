@@ -101,18 +101,20 @@ body {
 
 .container-logo {
   position: static;
-  width: 20%;
+  width: 50%;
   vertical-align: middle;
+  padding-right: 15px;
 }
 
  
 .container-logo img{
   position: static;
   width: 80%;
-  padding-left: 1rem;
 }
 
 .container-user{
+
+  align-items: center; 
 
   display: flex;
 
@@ -121,6 +123,8 @@ body {
   cursor: pointer;
 
   padding-right: 15px;
+
+  padding-left: 15px;
 
 }
 
@@ -132,21 +136,22 @@ body {
 
   color: var(--primary-color);
 
-  padding-right: 2.5rem;
-
-  border-right: 1px solid #e2e2e2e2;
-
+  padding-right: 1rem;
 }
 
  
 
 .fa-cart-shopping{
+  
 
   font-size: 1.5rem;
 
   color: var(--primary-color);
 
-  padding-left: 1rem;
+  padding-left: 2rem;
+
+  border-left: 1px solid #e2e2e2e2;
+
 
 }
 
@@ -159,7 +164,7 @@ body {
 
   border: 2px solid #581908;
 
-  border-radius: 3rem;
+  border-radius: 1rem;
 
   background-color: #fff;
 
@@ -178,7 +183,7 @@ body {
   border: none;
 
   
-  font-size: 1.4rem;
+  font-size: 1rem;
 
   padding: 20px 20px ;
 
@@ -451,7 +456,7 @@ ul{
 
     align-items: center;
   
-    width: 50%;
+    width: 40%;
   
   }
 
