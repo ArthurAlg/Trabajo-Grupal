@@ -46,5 +46,36 @@
     "C:\\Users\\yanne\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
     "C:\\Users\\yanne\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1602",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "System 4.1.311.2 no proporciona un límite inferior inclusivo para la dependencia Newtonsoft.Json. Se resolvió una mejor coincidencia aproximada de Newtonsoft.Json 3.5.8.",
+      "libraryId": "Newtonsoft.Json",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Trabajo Grupal depende de System (>= 4.0.0), pero no se encontró System 4.0.0. Se resolvió una mejor coincidencia aproximada de System 4.1.311.2.",
+      "libraryId": "System",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"System 4.1.311.2\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net6.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "libraryId": "System",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

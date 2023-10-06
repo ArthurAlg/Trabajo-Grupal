@@ -1,27 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\yanne\\Documents\\GitHub\\Trabajo-Grupal\\Trabajo Grupal.csproj": {}
+    "E:\\Perfil\\Documentos\\PROGRA 1_REATTER\\Trabajo-Grupal\\Trabajo Grupal.csproj": {}
   },
   "projects": {
-    "C:\\Users\\yanne\\Documents\\GitHub\\Trabajo-Grupal\\Trabajo Grupal.csproj": {
+    "E:\\Perfil\\Documentos\\PROGRA 1_REATTER\\Trabajo-Grupal\\Trabajo Grupal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\yanne\\Documents\\GitHub\\Trabajo-Grupal\\Trabajo Grupal.csproj",
+        "projectUniqueName": "E:\\Perfil\\Documentos\\PROGRA 1_REATTER\\Trabajo-Grupal\\Trabajo Grupal.csproj",
         "projectName": "Trabajo Grupal",
-        "projectPath": "C:\\Users\\yanne\\Documents\\GitHub\\Trabajo-Grupal\\Trabajo Grupal.csproj",
-        "packagesPath": "C:\\Users\\yanne\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\yanne\\Documents\\GitHub\\Trabajo-Grupal\\obj\\",
+        "projectPath": "E:\\Perfil\\Documentos\\PROGRA 1_REATTER\\Trabajo-Grupal\\Trabajo Grupal.csproj",
+        "packagesPath": "C:\\Users\\BRANDON\\.nuget\\packages\\",
+        "outputPath": "E:\\Perfil\\Documentos\\PROGRA 1_REATTER\\Trabajo-Grupal\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\yanne\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\BRANDON\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.308\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -40,6 +39,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "AspNetCore.HealthChecks": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.20, )"
@@ -58,17 +61,25 @@
               "target": "Package",
               "version": "[7.0.11, )"
             },
-            "Microsoft.EntityFrameworkCore.Sqlite": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[6.0.20, )"
+              "version": "[7.0.11, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "target": "Package",
               "version": "[6.0.20, )"
             },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[7.0.4, )"
+            },
+            "System": {
+              "target": "Package",
+              "version": "[4.0.0, )"
             }
           },
           "imports": [
@@ -90,7 +101,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.308\\RuntimeIdentifierGraph.json"
         }
       }
     }

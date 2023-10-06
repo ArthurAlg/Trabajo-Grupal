@@ -1,4 +1,4 @@
-From mcr.microsoft.com/dotnet/sdk:6.0 AS build-env
+FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build-env
 WORKDIR /app
 
 COPY *.csproj ./
@@ -11,6 +11,6 @@ FROM mcr.microsoft.com/dotnet/aspnet:6.0
 WORKDIR /app
 COPY --from=build-env /app/out .
 
-ENV APP_NET_CORE Trabajo-Grupal.dll
+ENV APP_NET_CORE="Trabajo Grupal.dll"
 
-CMD ASPNETCORE_URLS=http://*:$PORT dotnet $APP_NET_CORE
+CMD ASPNETCORE_URLS=http://*:$PORT dotnet "$APP_NET_CORE"
