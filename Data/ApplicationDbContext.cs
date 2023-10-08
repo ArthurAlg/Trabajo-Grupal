@@ -11,6 +11,6 @@ public class ApplicationDbContext : IdentityDbContext
     {
     }
 public DbSet<Trabajo_Grupal.Models.Producto> DataProducto{get;set;}
-public DbSet<Contacto> DataContactos { get; set; }
-
+public DbSet<Contacto> DataContactos {get;set;}
+public DbSet<Carrito> DataCarrito {get;set;}
 }
