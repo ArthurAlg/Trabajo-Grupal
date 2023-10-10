@@ -11,10 +11,10 @@ namespace Trabajo_Grupal.Models
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("id")]
-        public int Id { get; set; }
-        public string? Name { get; set;}
-        public string? Email { get; set;}
-        public string? Phone { get; set;}
-        public string? Question { get; set;}
+        public int Id {get;set;}
+        public string? Name {get;set;}
+        public string? Email {get;set;}
+        public string? Phone {get;set;}
+        public string? Question {get;set;}
     }
 }
