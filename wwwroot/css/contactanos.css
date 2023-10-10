@@ -22,9 +22,14 @@ html {
 body {
   
   margin-bottom: 60px;
-  background-color: #f6f6ff;
+  background-color: #ffffff;
   
-  
+}
+
+:root{
+  --primary-color: #581908;
+  --background-color: #f8f2ec;
+  --second-color: #F5C116;
 }
   
 /* ------------------------- Contactanos --------------------------------*/
