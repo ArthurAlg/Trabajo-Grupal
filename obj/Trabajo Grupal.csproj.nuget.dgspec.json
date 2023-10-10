@@ -1,26 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Perfil\\Documentos\\PROGRA 1_REATTER\\Trabajo-Grupal\\Trabajo Grupal.csproj": {}
+    "C:\\Users\\yanne\\Documents\\GitHub\\Trabajo-Grupal\\Trabajo Grupal.csproj": {}
   },
   "projects": {
-    "E:\\Perfil\\Documentos\\PROGRA 1_REATTER\\Trabajo-Grupal\\Trabajo Grupal.csproj": {
+    "C:\\Users\\yanne\\Documents\\GitHub\\Trabajo-Grupal\\Trabajo Grupal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Perfil\\Documentos\\PROGRA 1_REATTER\\Trabajo-Grupal\\Trabajo Grupal.csproj",
+        "projectUniqueName": "C:\\Users\\yanne\\Documents\\GitHub\\Trabajo-Grupal\\Trabajo Grupal.csproj",
         "projectName": "Trabajo Grupal",
-        "projectPath": "E:\\Perfil\\Documentos\\PROGRA 1_REATTER\\Trabajo-Grupal\\Trabajo Grupal.csproj",
-        "packagesPath": "C:\\Users\\BRANDON\\.nuget\\packages\\",
-        "outputPath": "E:\\Perfil\\Documentos\\PROGRA 1_REATTER\\Trabajo-Grupal\\obj\\",
+        "projectPath": "C:\\Users\\yanne\\Documents\\GitHub\\Trabajo-Grupal\\Trabajo Grupal.csproj",
+        "packagesPath": "C:\\Users\\yanne\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\yanne\\Documents\\GitHub\\Trabajo-Grupal\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\BRANDON\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\yanne\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files\\dotnet\\sdk\\7.0.308\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -101,7 +102,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.308\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
