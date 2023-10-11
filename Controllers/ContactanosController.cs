@@ -33,7 +33,7 @@ namespace Trabajo_Grupal.Controllers
         {
             _context.Add(objContacto);
             _context.SaveChanges();
-            ViewData["Message"] = string.Concat("Estimado " , objContacto.Name, " te estaremos contactando pronto.");
+            ViewData["Message"] = string.Concat("Estimado " , objContacto.Name, " , te estaremos contactando pronto.");
             return View("Index");
         }
 
