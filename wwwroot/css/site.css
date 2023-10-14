@@ -21,8 +21,11 @@ html {
 
 body {
   
-  margin-bottom: 60px;
+  /*margin-bottom: 60px;*/
   background-color: #ffffff;
+  height: 100vh;
+	display: flex;
+    flex-flow: column;
   
 }
 
@@ -488,13 +491,14 @@ ul{
 }
 
 .footer {
-  background-color: #581908;
-  height: auto;
-  width: 100%;
-  padding-top: 50px;
-  margin-top: auto;
+	background-color: #581908;
+	height: auto;
+	width: 100%;
+	padding-top: 50px;
+	margin-top: auto;
+	
+  }
   
-}
 
 .footer-row {
   display: flex;
