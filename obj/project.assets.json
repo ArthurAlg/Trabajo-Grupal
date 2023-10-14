@@ -11809,26 +11809,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\yanne\\.nuget\\packages\\": {}
+    "C:\\Users\\Franco Sanchez\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\yanne\\Documents\\GitHub\\Trabajo-Grupal\\Trabajo Grupal.csproj",
+      "projectUniqueName": "C:\\Users\\Franco Sanchez\\Desktop\\PROYECTO PROGRA\\TrabajoGrupal\\Trabajo-Grupal\\Trabajo Grupal.csproj",
       "projectName": "Trabajo Grupal",
-      "projectPath": "C:\\Users\\yanne\\Documents\\GitHub\\Trabajo-Grupal\\Trabajo Grupal.csproj",
-      "packagesPath": "C:\\Users\\yanne\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\yanne\\Documents\\GitHub\\Trabajo-Grupal\\obj\\",
+      "projectPath": "C:\\Users\\Franco Sanchez\\Desktop\\PROYECTO PROGRA\\TrabajoGrupal\\Trabajo-Grupal\\Trabajo Grupal.csproj",
+      "packagesPath": "C:\\Users\\Franco Sanchez\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Franco Sanchez\\Desktop\\PROYECTO PROGRA\\TrabajoGrupal\\Trabajo-Grupal\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\yanne\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Franco Sanchez\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -11909,7 +11907,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.414\\RuntimeIdentifierGraph.json"
       }
     }
   },
@@ -11918,7 +11916,7 @@
       "code": "NU1602",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "System 4.1.311.2 no proporciona un límite inferior inclusivo para la dependencia Newtonsoft.Json. Se resolvió una mejor coincidencia aproximada de Newtonsoft.Json 3.5.8.",
+      "message": "System 4.1.311.2 does not provide an inclusive lower bound for dependency Newtonsoft.Json. An approximate best match of Newtonsoft.Json 3.5.8 was resolved.",
       "libraryId": "Newtonsoft.Json",
       "targetGraphs": [
         "net6.0"
@@ -11928,7 +11926,7 @@
       "code": "NU1603",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Trabajo Grupal depende de System (>= 4.0.0), pero no se encontró System 4.0.0. Se resolvió una mejor coincidencia aproximada de System 4.1.311.2.",
+      "message": "Trabajo Grupal depends on System (>= 4.0.0) but System 4.0.0 was not found. An approximate best match of System 4.1.311.2 was resolved.",
       "libraryId": "System",
       "targetGraphs": [
         "net6.0"
@@ -11938,7 +11936,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "El paquete \"System 4.1.311.2\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net6.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "message": "Package 'System 4.1.311.2' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
       "libraryId": "System",
       "targetGraphs": [
         "net6.0"
