@@ -1,36 +1,105 @@
 @{
-    ViewData["Title"] = "Sobre Nosostros | ";
+  ViewData["Title"] = "Sobre Nosostros | ";
 }
 <style>
-  .container {
-    position: relative;
+  /* Estilo del contenedor superior .wrap */
+  .wrap {
+    height: 50vh; /* El 50% de la altura de la ventana */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(Images/nosotros1.png);
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+  }
+
+  /* Estilo del texto del contenedor .wrap */
+  .wrap-texto {
+    color: #fff;
     text-align: center;
+    width: 50%;
   }
 
-  .image {
+  /* Estilo del primer contenedor inferior con la imagen y texto superpuesto */
+  .imagen-inferior {
+    height: 50vh; /* El 50% de la altura de la ventana */
+    width: 50%; /* El 50% del ancho de la ventana */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(Images/mision.jpg);
+    background-size: cover;
+    background-position: bottom left; /* Posiciona la imagen abajo a la izquierda */
+    position: relative; /* Necesario para posicionar el texto en la imagen */
+    float: left; /* Hacer que se comporte como un elemento flotante a la izquierda */
+    display: flex;
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
    
-    margin: 0 30% 0 auto; /* Centrar la imagen horizontalmente */
   }
 
-  .text {
+  /* Estilo del texto superpuesto en el primer contenedor inferior */
+  .texto-superpuesto {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para el texto */
-    color: white;
+    text-align: center;
+    color: #fff;
     padding: 10px;
+    box-shadow: none; /* Quitar sombra al texto */
+  }
+
+  /* Estilo del segundo contenedor inferior con la misma imagen */
+  .imagen-inferior-derecha {
+    height: 50vh; /* El 50% de la altura de la ventana */
+    width: 50%; /* El 50% del ancho de la ventana */
+     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(Images/vision.png);
+    background-size: cover;
+    background-position: bottom right; /* Posiciona la imagen abajo a la derecha */
+    position: relative; /* Necesario para posicionar el texto en la imagen */
+    float: left; /* Hacer que se comporte como un elemento flotante a la izquierda */
+    display: flex;
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+   
+  }
+
+  /* Estilo del texto superpuesto en el segundo contenedor inferior */
+  .texto-superpuesto-derecha {
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    padding: 10px;
+    box-shadow: none; /* Quitar sombra al texto */
+  }
+
+  /* Limpia los elementos flotantes para evitar problemas de diseño */
+  .clear {
+    clear: both;
   }
 </style>
-<header>
-    <h1>Sobre nosotros</h1>
-</header>
+
 
 <main>
-   <div class="container">
-  <img class="image" src="Images/nosotros1.png" alt="Tu imagen">
-  <div class="text">
-    Texto superpuesto
+  <div class="wrap">
+    <div class="wrap-texto">
+      <h1>Nosotros</h1>
+      <p>Somos una empresa de venta de libros online que ofrece una amplia selección de libros de todos los géneros, desde ficción hasta no ficción, pasando por literatura infantil y juvenil. Nuestro objetivo es ofrecer a nuestros clientes la mejor experiencia de compra posible, con un catálogo amplio y actualizado, precios competitivos y un servicio de atención al cliente de alta calidad.</p>
+    </div>
   </div>
-</div>
-    </main>
+
+  <div class="imagen-inferior">
+    <div class="texto-superpuesto">
+      <h2>Misión</h2>
+      <p> &nbsp;  Ofrecer lecturas asequibles y de calidad para impulsar <br> la pasión por la lectura en el Perú.</p>
+        
+    </div>
+  </div>
+
+  <div class="imagen-inferior-derecha">
+    <div class="texto-superpuesto-derecha">
+      <h2>Visión</h2>
+      <p>  Ser el destino preferido de lectores que buscan libros económicos y emocionantes en todo el Perú.</p>
+       
+    </div>
+  </div>
+
+  <!-- Limpia los elementos flotantes para evitar problemas de diseño -->
+  <div class="clear"></div>
+</main>

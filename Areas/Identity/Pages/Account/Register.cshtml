@@ -26,9 +26,13 @@
                     <p>Regístrate para recibir nuestras noticias,<br/> novedades y acceder a nuestras promociones.</p>
                 </section>
             </div>
+            
             <div class="right">
                 <section>
                     <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+                       <p style="text-align: center; font-weight: bold; font-size: 1.8em; color: #581908;">REGÍSTRATE</p>
+
+
                         <p>Completa el siguiente formulario.</p>
                         <hr />
                         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -47,7 +51,7 @@
                             <label asp-for="Input.ConfirmPassword"></label>
                             <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
                         </div>
-                        <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary signup-btn">Registrarme</button>
+                        <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary signup-btn">Registrar cuenta</button>
                         <div >
                             <p>
                             </p>
