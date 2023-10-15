@@ -2,48 +2,35 @@
     ViewData["Title"] = "Sobre Nosostros | ";
 }
 <style>
-    header {
-      text-align: center;
-    }
+  .container {
+    position: relative;
+    text-align: center;
+  }
 
-    section {
-      margin: 2% auto;
-      width: 80%;
-      border: 1px solid rgb(212, 182, 99);
-      background-color: rgb(212, 182, 99);
-      padding: 20px;
-      border-radius: 20px;
-    }
+  .image {
+   
+    margin: 0 30% 0 auto; /* Centrar la imagen horizontalmente */
+  }
 
-    h2 {
-      text-align: center;
-    }
-
-    p {
-      font-family: serif;
-      font-size: larger;
-    }
-  </style>
+  .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para el texto */
+    color: white;
+    padding: 10px;
+  }
+</style>
 <header>
     <h1>Sobre nosotros</h1>
 </header>
 
 <main>
-    <section>
-        <h2>Quiénes somos</h2>
-        <p>Somos una empresa de venta de libros online que ofrece una amplia selección de libros de todos los géneros, desde ficción hasta no ficción, pasando por literatura infantil y juvenil.</p>
-        <p>Nuestro objetivo es ofrecer a nuestros clientes la mejor experiencia de compra posible, con un catálogo amplio y actualizado, precios competitivos y un servicio de atención al cliente de alta calidad.</p>
-    </section>
-
-    <section>
-        <h2>Nuestra misión</h2>
-        <p>Nuestra misión es hacer que la lectura sea accesible a todos, independientemente de su ubicación o presupuesto.</p>
-        <p>Para ello, ofrecemos una amplia selección de libros a precios competitivos, y facilitamos el acceso a los libros a través de nuestro sitio web y nuestra aplicación móvil.</p>
-    </section>
-
-    <section>
-        <h2>Nuestro equipo</h2>
-        <p> Nuestro equipo está formado por profesionales apasionados por la lectura, que están comprometidos a ofrecer la mejor experiencia posible a nuestros clientes.</p>
-        <p>Estamos constantemente trabajando para mejorar nuestro catálogo, nuestro servicio al cliente y nuestra plataforma online, para que nuestros clientes puedan disfrutar de la lectura al máximo.</p>
-    </section>
+   <div class="container">
+  <img class="image" src="Images/nosotros1.png" alt="Tu imagen">
+  <div class="text">
+    Texto superpuesto
+  </div>
+</div>
     </main>
