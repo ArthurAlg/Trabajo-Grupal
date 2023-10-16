@@ -30,9 +30,10 @@
             <div class="right">
                 <section>
             <form id="account" method="post">
-                <h2 style="text-align: center;">INICIAR SESIÓN</h2>
+                <h2 style="text-align: center; color: #581908;">INICIAR SESIÓN</h2>
+
                 <div class="login-container">
-                <p>¿Todavia no tienes una cuenta? <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl"><strong>REGÍSTRATE</strong></a></p>
+                <p>¿Todavia no tienes una cuenta? <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl"><strong>REGÍSTRATE </strong></a></p>
                 </div>
                 <hr />
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -54,17 +55,19 @@
                         </label>
                     </div>
                 </div>
+                <br>
                 <div>
-                    <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary signup-btn">Log in</button>
+                    <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary signup-btn"> Iniciar Sesión </button>
                 </div>
                 <div >
                     <p>
                     </p>
                     <p>
-                        <a id="forgot-password" asp-page="./ForgotPassword">¿Olvidaste tu contraseña?</a>
+                        <a id="forgot-password" asp-page="./ForgotPassword" style="text-align: center; display: block; margin: 0 auto;">¿Olvidaste tu contraseña?</a>
+
                     </p>
                     <p>
-                        <a id="resend-confirmation" asp-page="./ResendEmailConfirmation">Resend email confirmation</a>
+                        
                     </p>
                 </div>
             </form>
