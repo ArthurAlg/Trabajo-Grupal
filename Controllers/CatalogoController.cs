@@ -20,7 +20,10 @@ namespace Trabajo_Grupal.Controllers
 
         private readonly UserManager<IdentityUser> _userManager;
         private readonly SignInManager<IdentityUser> _signInManager;
-        public CatalogoController(ApplicationDbContext context, ILogger<CatalogoController> logger,UserManager<IdentityUser> userManager,SignInManager<IdentityUser> signInManager)
+        public CatalogoController(ILogger<CatalogoController> logger,
+            ApplicationDbContext context,
+            UserManager<IdentityUser> userManager,
+            SignInManager<IdentityUser> signInManager)
         {
             _context = context;
             _logger = logger;
@@ -33,8 +36,8 @@ namespace Trabajo_Grupal.Controllers
             return View(productos.ToList());
         }
 
-       /* public async Task<IActionResult> Details(int? id){
-            Productos? objProduct = await _context.DataProductos.FindAsync(id);
+       public async Task<IActionResult> Details(int? id){
+            Producto? objProduct = await _context.DataProductos.FindAsync(id);
             if(objProduct == null){
                 return NotFound();
             }
@@ -45,13 +48,14 @@ namespace Trabajo_Grupal.Controllers
             var userID = _userManager.GetUserName(User);
             if(userID == null){
                 //no se ha logueado
-                ViewData["Message"] = "Por favor debe loguearse antes de agregar un producto";
+                 ViewData["Message"] = "Por favor debe loguearse antes de agregar un producto";
                 List<Producto> productos = new List<Producto>();
                 return  View("Index",productos);
             }else{
                 //ya esta logueado
-                var producto = await _context.DataProducto.FindAsync(id);
-                Carrito proforma = new Carrito();
+               var producto = await _context.DataProductos.FindAsync(id);
+
+                Proforma proforma = new Proforma();
                 proforma.Producto = producto;
                 proforma.Precio = producto.Precio; //precio del producto en ese momento
                 proforma.Cantidad = 1;
@@ -60,7 +64,7 @@ namespace Trabajo_Grupal.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-        }*/
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

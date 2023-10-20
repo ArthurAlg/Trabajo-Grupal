@@ -305,6 +305,38 @@ namespace Trabajo_Grupal.Data.Migrations
                     b.ToTable("t_product");
                 });
 
+            modelBuilder.Entity("Trabajo_Grupal.Models.Proforma", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasColumnName("id");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("Cantidad")
+                        .HasColumnType("integer");
+
+                    b.Property<decimal>("Precio")
+                        .HasColumnType("numeric");
+
+                    b.Property<int?>("ProductoId")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("UserID")
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductoId");
+
+                    b.ToTable("t_proforma");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -354,6 +386,15 @@ namespace Trabajo_Grupal.Data.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Trabajo_Grupal.Models.Proforma", b =>
+                {
+                    b.HasOne("Trabajo_Grupal.Models.Producto", "Producto")
+                        .WithMany()
+                        .HasForeignKey("ProductoId");
+
+                    b.Navigation("Producto");
                 });
 #pragma warning restore 612, 618
         }
