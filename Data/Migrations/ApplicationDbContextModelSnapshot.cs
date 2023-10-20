@@ -222,7 +222,177 @@ namespace Trabajo_Grupal.Data.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("Trabajo_Grupal.Models.Carrito", b =>
+            modelBuilder.Entity("Trabajo_Grupal.Models.Contacto", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasColumnName("id");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Email")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Phone")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Question")
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("t_contacto");
+                });
+
+            modelBuilder.Entity("Trabajo_Grupal.Models.DetallePedido", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasColumnName("id");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("ID"));
+
+                    b.Property<int>("Cantidad")
+                        .HasColumnType("integer");
+
+                    b.Property<decimal>("Precio")
+                        .HasColumnType("numeric");
+
+                    b.Property<int?>("ProductoId")
+                        .HasColumnType("integer");
+
+                    b.Property<int?>("pedidoID")
+                        .HasColumnType("integer");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("ProductoId");
+
+                    b.HasIndex("pedidoID");
+
+                    b.ToTable("t_detalle_pedido");
+                });
+
+            modelBuilder.Entity("Trabajo_Grupal.Models.Pago", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasColumnName("id");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<decimal>("MontoTotal")
+                        .HasColumnType("numeric");
+
+                    b.Property<string>("NombreTarjeta")
+                        .HasColumnType("text");
+
+                    b.Property<string>("NumeroTarjeta")
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("PaymentDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("UserID")
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("t_pago");
+                });
+
+            modelBuilder.Entity("Trabajo_Grupal.Models.Pedido", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasColumnName("id");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("ID"));
+
+                    b.Property<string>("Status")
+                        .HasColumnType("text");
+
+                    b.Property<decimal>("Total")
+                        .HasColumnType("numeric");
+
+                    b.Property<string>("UserID")
+                        .HasColumnType("text");
+
+                    b.Property<int?>("pagoId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("pagoId");
+
+                    b.ToTable("t_pedido");
+                });
+
+            modelBuilder.Entity("Trabajo_Grupal.Models.Producto", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasColumnName("id");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Autor")
+                        .HasColumnType("text")
+                        .HasColumnName("autor");
+
+                    b.Property<string>("Descripcion")
+                        .HasColumnType("text")
+                        .HasColumnName("descripcion");
+
+                    b.Property<decimal>("Descuento")
+                        .HasColumnType("numeric")
+                        .HasColumnName("descuento");
+
+                    b.Property<string>("Editorial")
+                        .HasColumnType("text")
+                        .HasColumnName("editorial");
+
+                    b.Property<string>("Genero")
+                        .HasColumnType("text")
+                        .HasColumnName("genero");
+
+                    b.Property<string>("Idioma")
+                        .HasColumnType("text")
+                        .HasColumnName("idioma");
+
+                    b.Property<string>("ImageName")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("text")
+                        .HasColumnName("name");
+
+                    b.Property<int>("Npag")
+                        .HasColumnType("integer")
+                        .HasColumnName("n_pag");
+
+                    b.Property<decimal>("Precio")
+                        .HasColumnType("numeric")
+                        .HasColumnName("precio");
+
+                    b.Property<int>("año")
+                        .HasColumnType("integer")
+                        .HasColumnName("año");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("t_product");
+                });
+
+            modelBuilder.Entity("Trabajo_Grupal.Models.Proforma", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -252,61 +422,6 @@ namespace Trabajo_Grupal.Data.Migrations
                     b.HasIndex("ProductoId");
 
                     b.ToTable("t_proforma");
-                });
-
-            modelBuilder.Entity("Trabajo_Grupal.Models.Contacto", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer")
-                        .HasColumnName("id");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Email")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Phone")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Question")
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("t_contacto");
-                });
-
-            modelBuilder.Entity("Trabajo_Grupal.Models.Producto", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer")
-                        .HasColumnName("id");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Descripcion")
-                        .HasColumnType("text")
-                        .HasColumnName("descripcion");
-
-                    b.Property<string>("ImageName")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("text")
-                        .HasColumnName("name");
-
-                    b.Property<decimal>("Precio")
-                        .HasColumnType("numeric")
-                        .HasColumnName("precio");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("t_producto");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -360,7 +475,31 @@ namespace Trabajo_Grupal.Data.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Trabajo_Grupal.Models.Carrito", b =>
+            modelBuilder.Entity("Trabajo_Grupal.Models.DetallePedido", b =>
+                {
+                    b.HasOne("Trabajo_Grupal.Models.Producto", "Producto")
+                        .WithMany()
+                        .HasForeignKey("ProductoId");
+
+                    b.HasOne("Trabajo_Grupal.Models.Pedido", "pedido")
+                        .WithMany()
+                        .HasForeignKey("pedidoID");
+
+                    b.Navigation("Producto");
+
+                    b.Navigation("pedido");
+                });
+
+            modelBuilder.Entity("Trabajo_Grupal.Models.Pedido", b =>
+                {
+                    b.HasOne("Trabajo_Grupal.Models.Pago", "pago")
+                        .WithMany()
+                        .HasForeignKey("pagoId");
+
+                    b.Navigation("pago");
+                });
+
+            modelBuilder.Entity("Trabajo_Grupal.Models.Proforma", b =>
                 {
                     b.HasOne("Trabajo_Grupal.Models.Producto", "Producto")
                         .WithMany()

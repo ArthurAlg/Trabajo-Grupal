@@ -40,8 +40,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/yanne/Documents/GitHub/Trabajo-Grupal/Views/Carrito/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fycml0b1xJbmRleC5jc2h0bWw=
+[C:/Users/yanne/Documents/GitHub/Trabajo-Grupal/Views/Carrito/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fycml0b1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yanne/Documents/GitHub/Trabajo-Grupal/Views/Carrito/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fycml0b1xpbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/yanne/Documents/GitHub/Trabajo-Grupal/Views/Catalogo/Details.cshtml]
@@ -66,6 +70,30 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/yanne/Documents/GitHub/Trabajo-Grupal/Views/Nosotros/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9zb3Ryb3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yanne/Documents/GitHub/Trabajo-Grupal/Views/Pago/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnb1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yanne/Documents/GitHub/Trabajo-Grupal/Views/Producto/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yanne/Documents/GitHub/Trabajo-Grupal/Views/Producto/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9cRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yanne/Documents/GitHub/Trabajo-Grupal/Views/Producto/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9cRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yanne/Documents/GitHub/Trabajo-Grupal/Views/Producto/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9cRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yanne/Documents/GitHub/Trabajo-Grupal/Views/Producto/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/yanne/Documents/GitHub/Trabajo-Grupal/Views/Shared/Error.cshtml]

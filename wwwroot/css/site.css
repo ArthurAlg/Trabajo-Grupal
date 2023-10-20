@@ -459,6 +459,15 @@ a{
 	color:#ea4636;
 }
 /* header partial*/
+
+.navbar-nav {
+    display: flex;
+    padding-left: 0;
+	flex-direction: row;
+    margin-bottom: 0;
+    list-style: none;
+	align-items: center;
+}
 /*-------------- CSS NAV ----------------------*/
 
 /* ------------- CSS FOOTER -------------------*/
