@@ -222,38 +222,6 @@ namespace Trabajo_Grupal.Data.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("Trabajo_Grupal.Models.Carrito", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer")
-                        .HasColumnName("id");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("Cantidad")
-                        .HasColumnType("integer");
-
-                    b.Property<decimal>("Precio")
-                        .HasColumnType("numeric");
-
-                    b.Property<int?>("ProductoId")
-                        .HasColumnType("integer");
-
-                    b.Property<string>("Status")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("UserID")
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ProductoId");
-
-                    b.ToTable("t_proforma");
-                });
-
             modelBuilder.Entity("Trabajo_Grupal.Models.Contacto", b =>
                 {
                     b.Property<int>("Id")
@@ -289,9 +257,29 @@ namespace Trabajo_Grupal.Data.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("Autor")
+                        .HasColumnType("text")
+                        .HasColumnName("autor");
+
                     b.Property<string>("Descripcion")
                         .HasColumnType("text")
                         .HasColumnName("descripcion");
+
+                    b.Property<decimal>("Descuento")
+                        .HasColumnType("numeric")
+                        .HasColumnName("descuento");
+
+                    b.Property<string>("Editorial")
+                        .HasColumnType("text")
+                        .HasColumnName("editorial");
+
+                    b.Property<string>("Genero")
+                        .HasColumnType("text")
+                        .HasColumnName("genero");
+
+                    b.Property<string>("Idioma")
+                        .HasColumnType("text")
+                        .HasColumnName("idioma");
 
                     b.Property<string>("ImageName")
                         .HasColumnType("text");
@@ -300,13 +288,21 @@ namespace Trabajo_Grupal.Data.Migrations
                         .HasColumnType("text")
                         .HasColumnName("name");
 
+                    b.Property<int>("Npag")
+                        .HasColumnType("integer")
+                        .HasColumnName("n_pag");
+
                     b.Property<decimal>("Precio")
                         .HasColumnType("numeric")
                         .HasColumnName("precio");
 
+                    b.Property<int>("año")
+                        .HasColumnType("integer")
+                        .HasColumnName("año");
+
                     b.HasKey("Id");
 
-                    b.ToTable("t_producto");
+                    b.ToTable("t_product");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -358,15 +354,6 @@ namespace Trabajo_Grupal.Data.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("Trabajo_Grupal.Models.Carrito", b =>
-                {
-                    b.HasOne("Trabajo_Grupal.Models.Producto", "Producto")
-                        .WithMany()
-                        .HasForeignKey("ProductoId");
-
-                    b.Navigation("Producto");
                 });
 #pragma warning restore 612, 618
         }

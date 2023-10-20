@@ -29,12 +29,12 @@ namespace Trabajo_Grupal.Controllers
         }
 
         public IActionResult Index() {
-            var productos = from o in _context.DataProducto select o;
+            var productos = from o in _context.DataProductos select o;
             return View(productos.ToList());
         }
 
-        public async Task<IActionResult> Details(int? id){
-            Producto? objProduct = await _context.DataProducto.FindAsync(id);
+       /* public async Task<IActionResult> Details(int? id){
+            Productos? objProduct = await _context.DataProductos.FindAsync(id);
             if(objProduct == null){
                 return NotFound();
             }
@@ -60,7 +60,7 @@ namespace Trabajo_Grupal.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-        }
+        }*/
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
