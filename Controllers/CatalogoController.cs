@@ -15,11 +15,11 @@ namespace Trabajo_Grupal.Controllers
     public class CatalogoController : Controller
     {
         private readonly ILogger<CatalogoController> _logger;
-
         private readonly ApplicationDbContext _context;
-
         private readonly UserManager<IdentityUser> _userManager;
         private readonly SignInManager<IdentityUser> _signInManager;
+        
+        
         public CatalogoController(ILogger<CatalogoController> logger,
             ApplicationDbContext context,
             UserManager<IdentityUser> userManager,
