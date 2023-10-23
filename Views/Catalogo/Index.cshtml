@@ -4,8 +4,30 @@
     ViewData["Title"] = "Catalogo | ";
 }
 
-     <div class="container">
-        <h1>Lista de Productos</h1>
+    <style>
+        .container-catalogo{
+            padding-left: 8%;
+            padding-right: 8%;
+        }
+        .card.mb-3{
+            border-color: #ebf5ee;
+            border-width: 3px;
+        }
+        .title{
+            padding-top: 10px;
+            padding-bottom: 10px;
+            text-align: center;
+            background-color: #bcabae;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+    </style>
+
+    <div class="container-catalogo">
+        <div class="title">
+            <h1>CATÁLOGO DE PRODUCTOS</h1>
+        </div>
         <h1>@ViewData["Message"]</h1>
         <div class="row">
             <div class="col">
@@ -16,7 +38,7 @@
                                 <div class="card mb-3">
                                     <div class="card-body">
                                         <div class="card-img-actions">
-                                            <img  class="card-img-top" src="@item.ImageName" alt="@item.ImageName">
+                                            <img  class="card-img-top" width="200" height="600" src="@item.ImageName" alt="@item.ImageName">
                                         </div>
                                     </div>
                                     <div class="card-body">

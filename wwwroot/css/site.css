@@ -55,8 +55,7 @@ body {
 .header{
   text-align: center;
   background-color: var(--background-color);
-  color: #581908
-
+  color: #581908;
 }
   
 .container{
