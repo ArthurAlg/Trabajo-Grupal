@@ -1,0 +1,47 @@
+@model dynamic;
+@using System.Collections.Generic;
+
+@{
+    ViewData["Title"] = "Lista de Deseos";
+    IEnumerable<Trabajo_Grupal.Models.MiLista> listItemsCarrito1 = new List<MiLista>();
+    listItemsCarrito1 = @Model.elementosCarrito1;
+}
+
+<h1>@ViewData["Title"]</h1>
+ 
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model1 => listItemsCarrito1.FirstOrDefault().Producto.ImageName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model1 => listItemsCarrito1.FirstOrDefault().Producto.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model1 => listItemsCarrito1.FirstOrDefault().Precio)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (Proforma item1 in Model.elementosCarrito1) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item1.Producto.ImageName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item1.Producto.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item1.Precio)
+            </td>
+            <td>
+                <a onclick="add()" class="btn btn-primary" asp-action="Add" asp-route-id="@item1.Id" >Add</a>
+                <a asp-action="Delete" asp-route-id="@item1.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

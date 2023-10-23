@@ -278,6 +278,34 @@ namespace Trabajo_Grupal.Data.Migrations
                     b.ToTable("t_detalle_pedido");
                 });
 
+            modelBuilder.Entity("Trabajo_Grupal.Models.MiLista", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasColumnName("id");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<decimal>("Precio")
+                        .HasColumnType("numeric");
+
+                    b.Property<int?>("ProductoId")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("UserID")
+                        .HasColumnType("text");
+
+                    b.Property<string>("imgProducto")
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductoId");
+
+                    b.ToTable("t_mi_lista");
+                });
+
             modelBuilder.Entity("Trabajo_Grupal.Models.Pago", b =>
                 {
                     b.Property<int>("Id")
@@ -488,6 +516,15 @@ namespace Trabajo_Grupal.Data.Migrations
                     b.Navigation("Producto");
 
                     b.Navigation("pedido");
+                });
+
+            modelBuilder.Entity("Trabajo_Grupal.Models.MiLista", b =>
+                {
+                    b.HasOne("Trabajo_Grupal.Models.Producto", "Producto")
+                        .WithMany()
+                        .HasForeignKey("ProductoId");
+
+                    b.Navigation("Producto");
                 });
 
             modelBuilder.Entity("Trabajo_Grupal.Models.Pedido", b =>
