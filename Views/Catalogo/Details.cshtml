@@ -1,28 +1,55 @@
 @model Trabajo_Grupal.Models.Producto
-
 @{
     ViewData["Title"] = "Detalles del Producto | ";
 }
-
- <h1>Details</h1>
-    <div class="container">
-            <div class="col-sm-4">
-              <div class="card mb-3">
-                <div class="card-body">
-                  <div class="card-img-actions">
-                    <img class="img-responsive" width="96" height="150"
-                       src="@Html.DisplayFor(model => model.ImageName)" alt="@Html.DisplayFor(model => model.ImageName)"  />
-                  </div>
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">@Html.DisplayFor(model => model.Name)</h5>
-                  <p class="card-text">@Html.DisplayFor(model => model.Descripcion)</p>
-                  <h5 class="card-title">Precio: s/@Html.DisplayFor(model => model.Precio)</h5>
-                  <h5 class="card-title">Autor: @Html.DisplayFor(model => model.Autor)</h5>
-                  <h5 class="card-title">Genero: @Html.DisplayFor(model => model.Genero)</h5>
-                  <h5 class="card-title">Año de Publicacion: @Html.DisplayFor(model => model.año)</h5>
-                  <a class="btn btn-primary" asp-action="Add" asp-route-id="@Model.Id">Add</a>
-                </div>
-              </div>
-            </div>
+<style>
+  .card-text{
+    text-align: justify;
+  }
+  .title{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+    font-size: 5xp;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  .container-detalle{
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+  .guide {
+    padding-left: 2%;
+    color: black;
+  }
+</style>
+<div class="container-detalle">
+    <div class="title">
+        <a class="guide" asp-area="" asp-controller="Catalogo" asp-action="Index"><b>Catálogo</b></a> > <a color="black"><b>@Html.DisplayFor(model => model.Name)</b></a> 
     </div>
+    <div class="row">
+        <div class="col-md-4 d-flex align-items-center justify-content-center">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <div class="card-img-actions">
+                        <img class="img-responsive" width="400" height="600" src="@Html.DisplayFor(model => model.ImageName)" alt="@Html.DisplayFor(model => model.ImageName)" />
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">@Html.DisplayFor(model => model.Name)</h5>
+                    <p class="card-text">@Html.DisplayFor(model => model.Descripcion)</p>
+                    <h5 class="card-title">Precio: $@Html.DisplayFor(model => model.Precio)</h5>
+                    <h5 class="card-title">Autor: @Html.DisplayFor(model => model.Autor)</h5>
+                    <h5 class="card-title">Genero: @Html.DisplayFor(model => model.Genero)</h5>
+                    <h5 class="card-title">Año de Publicacion: @Html.DisplayFor(model => model.año)</h5>
+                    <a class="btn btn-primary" asp-action="Add" asp-route-id="@Model.Id">Add</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
