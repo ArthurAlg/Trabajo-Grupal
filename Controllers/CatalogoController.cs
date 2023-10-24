@@ -84,7 +84,7 @@ namespace Trabajo_Grupal.Controllers
                 milista.UserID = userID;
                 _context.Add(milista);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("index", "MisDeseos");
             }
         }
 
