@@ -1,47 +1,41 @@
 @model dynamic;
 @using System.Collections.Generic;
 
+
 @{
-    ViewData["Title"] = "Lista de Deseos";
-    IEnumerable<Trabajo_Grupal.Models.MiLista> listItemsCarrito1 = new List<MiLista>();
-    listItemsCarrito1 = @Model.elementosCarrito1;
+    ViewData["Title"] = "Mi Lista";
+    IEnumerable<Trabajo_Grupal.Models.MiLista> listItemsMiLista = new List<MiLista>();
+    listItemsMiLista = @Model.elementosMiLista;
 }
 
-<h1>@ViewData["Title"]</h1>
+<h1>Lista de Deseos</h1>
  
 
 <table class="table">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model1 => listItemsCarrito1.FirstOrDefault().Producto.ImageName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model1 => listItemsCarrito1.FirstOrDefault().Producto.Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model1 => listItemsCarrito1.FirstOrDefault().Precio)
-            </th>
             <th></th>
+            
+            <th>
+                @Html.DisplayNameFor(model1 => listItemsMiLista.FirstOrDefault().Producto.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model1 => listItemsMiLista.FirstOrDefault().Precio)
+            </th>
         </tr>
     </thead>
     <tbody>
-@foreach (MiLista item1 in Model.elementosCarrito1) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item1.Producto.ImageName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item1.Producto.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item1.Precio)
-            </td>
-            <td>
-                <a onclick="add()" class="btn btn-primary" asp-action="Add" asp-route-id="@item1.Id" >Add</a>
-                <a asp-action="Delete" asp-route-id="@item1.Id">Delete</a>
-            </td>
-        </tr>
+ @foreach (MiLista item in Model.elementosMiLista) {
+                            <tr>
+                                <td><img src="@item.Producto.ImageName" alt="@item.Producto.ImageName" width="100" height="150" /></td>
+                                <td>@Html.DisplayFor(modelItem => item.Producto.Name)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Precio)</td>
+                                <td>
+
+
+                                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Eliminar</a>
+                                </td>
+                            </tr>
 }
     </tbody>
 </table>

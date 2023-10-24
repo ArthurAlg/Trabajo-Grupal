@@ -38,13 +38,62 @@ namespace Trabajo_Grupal.Controllers
             items1 = items1.Include(p => p.Producto).
                 Where(w => w.UserID.Equals(userIDSession));
 
-            var itemsCarrito1 = items1.ToList();
+            var itemsMiLista = items1.ToList();
+            
+            
+            
+            //MEMORIA
             dynamic model1 = new ExpandoObject();
-            model1.elementosCarrito1 = itemsCarrito1;
+            model1.elementosMiLista = itemsMiLista;
             return View(model1);
         }
 
-        
+        public async Task<IActionResult> Edit(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var itemMiLista = await _context.DataMiLista.FindAsync(id);
+            if (itemMiLista == null)
+            {
+                return NotFound();
+            }
+            return View(itemMiLista);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Save(int id, [Bind("Id,Cantidad,Precio,UserID")] MiLista itemMiLista)
+        {
+            if (id != itemMiLista.Id)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _context.Update(itemMiLista);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!_context.DataMiLista.Any(e => e.Id == id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction(nameof(Index));
+            }
+            return View(itemMiLista);
+        }
 
         public async Task<IActionResult> Delete(int? id)
         {
@@ -53,8 +102,8 @@ namespace Trabajo_Grupal.Controllers
                 return NotFound();
             }
 
-            var itemcarrito1 = await _context.DataMiLista.FindAsync(id);
-            _context.DataMiLista.Remove(itemcarrito1);
+            var itemMiLista = await _context.DataMiLista.FindAsync(id);
+            _context.DataMiLista.Remove(itemMiLista);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         } 
