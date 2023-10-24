@@ -17,6 +17,7 @@
                 <table class="table table-bordered table-striped" style="background-color: #F6D384;">
                     <thead>
                         <tr>
+                            <th></th>
                             <th>Producto</th>
                             <th>Cantidad</th>
                             <th>Precio</th>
@@ -26,6 +27,7 @@
                     <tbody>
                         @foreach (Proforma item in Model.elementosCarrito) {
                             <tr>
+                                <td><img src="@item.Producto.ImageName" alt="@item.Producto.ImageName" width="100" height="150" /></td>
                                 <td>@Html.DisplayFor(modelItem => item.Producto.Name)</td>
                                 <td>@Html.DisplayFor(modelItem => item.Cantidad)</td>
                                 <td>@Html.DisplayFor(modelItem => item.Precio)</td>
@@ -40,10 +42,9 @@
             </div>
         </div>
         <div class="col-md-6">
-            <p>Total S/. @montoTotal</p>
-            <a class="btn btn-success" asp-controller="Pago" asp-action="Create" asp-route-monto="@montoTotal">Pagar</a>
+            <p class="text-right">Total S/. @montoTotal</p>
+            <a class="btn btn-success btn-block" asp-controller="Pago" asp-action="Create" asp-route-monto="@montoTotal">Pagar</a>
         </div>
-    </div>
+    </div>
 </div>
-
 

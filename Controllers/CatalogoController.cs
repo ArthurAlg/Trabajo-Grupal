@@ -66,6 +66,28 @@ namespace Trabajo_Grupal.Controllers
             }
         }
 
+        public async Task<IActionResult> Add1(int? id){
+            var userID = _userManager.GetUserName(User);
+            if(userID == null){
+                //no se ha logueado
+                 ViewData["Message"] = "Por favor debe loguearse antes de agregar un producto";
+                List<Producto> productos = new List<Producto>();
+                return  View("Index",productos);
+            }else{
+                //ya esta logueado
+               var producto = await _context.DataProductos.FindAsync(id);
+
+                MiLista milista = new MiLista();
+                milista.imgProducto = producto.ImageName;
+                milista.Producto = producto;
+                milista.Precio = producto.Precio; //precio del producto en ese momento
+                milista.UserID = userID;
+                _context.Add(milista);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
