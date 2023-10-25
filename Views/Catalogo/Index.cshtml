@@ -13,7 +13,7 @@
             border-color: #ebf5ee;
             border-width: 3px;
         }
-        .title{
+        .container-catalogo .title{
             padding-top: 10px;
             padding-bottom: 10px;
             text-align: center;
@@ -38,15 +38,15 @@
                                 <div class="card mb-3">
                                     <div class="card-body">
                                         <div class="card-img-actions">
-                                            <img  class="card-img-top" width="200" height="600" src="@item.ImageName" alt="@item.ImageName">
+                                            <img  class="card-img-top" width="100" height="500" src="@item.ImageName" alt="@item.ImageName">
                                         </div>
                                     </div>
                                     <div class="card-body">
                                         <h5 class="card-title">@Html.DisplayFor(modelItem => item.Name)</h5>
                                         <p class="card-text">S/. @Html.DisplayFor(modelItem => item.Precio)</p>
-                                        <a onclick="add()" class="btn btn-primary" asp-action="Add" asp-route-id="@item.Id" >Add</a>
-                                        <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">View</a>
-                                        <a onclick="add1()" class="btn btn-primary" asp-action="Add1" asp-route-id="@item.Id">love</a>
+                                        <a class="btn btn-link" asp-action="Details" asp-route-id="@item.Id" title="Ver detalles"><i class="fa-solid fa-book" style="color: #000000;"></i></a>
+                                        <a onclick="add()" class="btn btn-link" asp-action="Add" asp-route-id="@item.Id" title="Añadir al carrito"><i class="fa-solid fa-basket-shopping" style="color: #000000;"></i></a>
+                                        <a onclick="add1()" class="btn btn-link" asp-action="Add1" asp-route-id="@item.Id" title="Mis Favoritos"><i class="fa-solid fa-heart" style="color: #000000;"></i></a>
                                     </div>
                                 </div>
                             </div> 

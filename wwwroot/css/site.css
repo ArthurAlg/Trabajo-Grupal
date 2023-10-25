@@ -114,8 +114,12 @@ body {
   font-size: 1.5rem;
   color: var(--primary-color);
   padding-right: 2.5rem;
-  border-right: 1px solid #e2e2e2e2;
 
+}
+
+.iconuser{
+	color: var(--primary-color);
+  padding-right: 1rem;
 }
 
 
@@ -123,7 +127,18 @@ body {
   font-size: 1.5rem;
   color: var(--primary-color);
   padding-left: 1rem;
+  padding-right: 1rem;
+  border-left: 1px solid #e2e2e2e2;
 
+}
+
+.heart3{
+	font-size: 1.5rem;
+	color: var(--primary-color);
+	padding-right: 1rem;
+	padding-left: 1rem;
+	align-items: center;
+	
 }
 
 
@@ -623,6 +638,10 @@ ul{
 	.container-form-movile{
 	  display: none;
 	}
+
+	.love{
+		display: none;
+	}
   
 	.container-form{
 	  display: block;
@@ -634,6 +653,10 @@ ul{
 	.container-form-movile{
 	  display: block;
 	}
+
+	.heart3{
+		display: none;
+	  }
   
 	.container-form{
 	  display: none;
@@ -642,6 +665,12 @@ ul{
 	.carousel-inner img{
 		align-items: center;
 		width: 20%;
+	  }
+
+	  .container-user{
+		padding-right: 0px;
+		
+	  
 	  }
 
   }

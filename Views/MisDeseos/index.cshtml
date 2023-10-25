@@ -8,34 +8,64 @@
     listItemsMiLista = @Model.elementosMiLista;
 }
 
-<h1>Lista de Deseos</h1>
- 
+    <style>
+        .all{
+            margin: 0;
+            padding: 2rem 1.5rem;
+            align-items: center;
+            align-content: center;
+        }
+        
+        .table{
+            text-align: center;
+            align-items: center;
+        }
 
-<table class="table">
-    <thead>
-        <tr>
-            <th></th>
+        .cont2{
+            text-align: left;
+        }
             
-            <th>
-                @Html.DisplayNameFor(model1 => listItemsMiLista.FirstOrDefault().Producto.Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model1 => listItemsMiLista.FirstOrDefault().Precio)
-            </th>
-        </tr>
-    </thead>
-    <tbody>
- @foreach (MiLista item in Model.elementosMiLista) {
-                            <tr>
-                                <td><img src="@item.Producto.ImageName" alt="@item.Producto.ImageName" width="100" height="150" /></td>
-                                <td>@Html.DisplayFor(modelItem => item.Producto.Name)</td>
-                                <td>@Html.DisplayFor(modelItem => item.Precio)</td>
-                                <td>
+    </style>
 
+    <div class="all">
 
-                                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Eliminar</a>
-                                </td>
-                            </tr>
-}
-    </tbody>
-</table>
+        <div class="title">
+            <h1>Mis favoritos</i></h1>
+        </div>
+
+        <div class="tablep">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+
+                        </th>
+                        
+                        <th class="cont2">
+                            @Html.DisplayNameFor(model1 => listItemsMiLista.FirstOrDefault().Producto.Name)
+                        </th>
+                        <th>
+
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (MiLista item in Model.elementosMiLista) {
+                        <tr class="cont">
+                            <td><img src="@item.Producto.ImageName" alt="@item.Producto.ImageName" width="80" height="100" /></td>
+                            <td class="cont2">@Html.DisplayFor(modelItem => item.Producto.Name)<br>s/.@Html.DisplayFor(modelItem => item.Precio)</td>
+                            
+                            <td>
+                                    <a class="btn btn-link" asp-action="Add" asp-route-id="@item.Producto.Id"><i class="fa-solid fa-basket-shopping fa-xl" style="color: #000000;"></i></a>
+                                    <a class="btn btn-link" asp-action="Delete" asp-route-id="@item.Id"><i class="fa-solid fa-x fa-xl" style="color: #000000;"></i></a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+    
+
+</div>
+
