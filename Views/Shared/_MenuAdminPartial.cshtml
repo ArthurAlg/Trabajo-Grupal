@@ -1,0 +1,21 @@
+@using Microsoft.AspNetCore.Identity
+@using System.Collections.Generic;
+
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+@if (SignInManager.IsSignedIn(User))
+{
+    IdentityUser identityUser  = await Task.Run(() => UserManager.GetUserAsync(User));
+    var roles = await Task.Run(() => UserManager.GetRolesAsync(identityUser));
+
+    @if(roles.Contains("Admin") ){
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="Carrito" asp-action="Index"><i class="fa-solid fa-cart-shopping" style="color: #581908;"></i></a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link text-dark heart3" asp-area="MisDeseos" asp-controller="MisDeseos" asp-action="Index"><i class="fa-solid fa-heart" style="color: #581908;"></i></a>
+        </li>
+    }
+}
