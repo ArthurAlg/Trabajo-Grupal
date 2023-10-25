@@ -45,6 +45,9 @@
                             @Html.DisplayNameFor(model1 => listItemsMiLista.FirstOrDefault().Producto.Name)
                         </th>
                         <th>
+                            @Html.DisplayNameFor(model1 => listItemsMiLista.FirstOrDefault().Producto.Precio)
+                        </th>
+                        <th>
 
                         </th>
                     </tr>
@@ -53,8 +56,8 @@
                     @foreach (MiLista item in Model.elementosMiLista) {
                         <tr class="cont">
                             <td><img src="@item.Producto.ImageName" alt="@item.Producto.ImageName" width="80" height="100" /></td>
-                            <td class="cont2">@Html.DisplayFor(modelItem => item.Producto.Name)<br>s/.@Html.DisplayFor(modelItem => item.Precio)</td>
-                            
+                            <td class="cont2">@Html.DisplayFor(modelItem => item.Producto.Name)</td>
+                            <td>s/.@Html.DisplayFor(modelItem => item.Precio)</td>
                             <td>
                                     <a class="btn btn-link" asp-action="Add" asp-route-id="@item.Producto.Id"><i class="fa-solid fa-basket-shopping fa-xl" style="color: #000000;"></i></a>
                                     <a class="btn btn-link" asp-action="Delete" asp-route-id="@item.Id"><i class="fa-solid fa-x fa-xl" style="color: #000000;"></i></a>
