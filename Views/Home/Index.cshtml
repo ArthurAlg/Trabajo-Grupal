@@ -109,7 +109,7 @@
                                 <div class="card-body">
                                     <h5 class="card-title">@Html.DisplayFor(modelItem => libro.Name)</h5>
                                     <p class="card-text">S/. @Html.DisplayFor(modelItem => libro.Precio)</p>
-                                    <a class="btn btn-link" asp-action="Details" asp-route-id="@libro.Id" title="Ver detalles"><i class="fa-solid fa-book" style="color: #000000;"></i></a>
+                                    <a class="btn btn-link" asp-action="DetailsHome" asp-route-id="@libro.Id" title="Ver detalles"><i class="fa-solid fa-book" style="color: #000000;"></i></a>
                                     <a onclick="add()" class="btn btn-link" asp-action="Add" asp-route-id="@libro.Id" title="Añadir al carrito"><i class="fa-solid fa-basket-shopping" style="color: #000000;"></i></a>
                                     <a onclick="add1()" class="btn btn-link" asp-action="Add1" asp-route-id="@libro.Id" title="Mis Favoritos"><i class="fa-solid fa-heart" style="color: #000000;"></i></a>
                                 </div>
