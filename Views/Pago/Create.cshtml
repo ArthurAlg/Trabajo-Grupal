@@ -28,19 +28,16 @@
                 <div class="payment-left">
                     <div class="payment-header">
                         <div class="payment-header-icon"><i class="ri-flashlight-fill"></i></div>
-                        <div class="payment-header-title">Order Summary</div>
-                        <p class="payment-header-description">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                        <div class="payment-header-title">Resumen del Pedido</div>
+                        <p class="payment-header-description"></p>
                     </div>
                     <div class="payment-content">
                         <div class="payment-body">
                             <div class="payment-plan">
-                                <div class="payment-plan-info">
-                                </div>
                                 <a class="payment-plan-change" asp-action="Index" asp-controller="Carrito">Regresar al carrito</a>
                                 </div>
                             <div class="payment-summary">
-                                <div class="payment-summary-item">
-                                </div>
+                                
                                 <div class="payment-summary-divider"></div>
                                 <div class="form-group payment-summary-item payment-summary-total">
                                     <div class="payment-summary-name"><label asp-for="MontoTotal" class="control-label"></label></div>
@@ -52,7 +49,7 @@
                 </div>
                 <div class="payment-right">
                     
-                        <h1 class="payment-title">Payment Details</h1>
+                        <h1 class="payment-title">Detalles del Pago</h1>
                         
                           <div class="payment-method">
                               <input type="radio" name="payment-method" id="method-1" checked>
@@ -75,25 +72,25 @@
 
                         <div class="form-group payment-form-group">
                             <input type="hidden" asp-for="UserID"/>
-                            <input type="text" name="NombreTarjeta" id="NombreTarjeta" data-val="true" data-val-required="El nombre de la tarjeta es obligatorio." asp-for="NombreTarjeta" class="form-control payment-form-control"  placeholder=" "  >
-                            <label  asp-for="NombreTarjeta" class="payment-form-label payment-form-label-required control-label">Nombre de tarjeta</label>
+                            <input type="text" name="NombreTarjeta" id="NombreTarjeta" data-val="true" data-val-required="El nombre de la tarjeta es obligatorio." asp-for="NombreTarjeta" class="form-control payment-form-control"  placeholder=" " required>
+                            <label  asp-for="NombreTarjeta" class="payment-form-label payment-form-label-required control-label" >Nombre de tarjeta</label>
                         </div>
 
                         <div class="payment-form-group form-group">
-                            <input type="text" name="NumeroTarjeta" data-val="true" data-val-required="El número de tarjeta es obligatorio." data-val-creditcard="Por favor, ingrese un número de tarjeta válido." asp-for="NumeroTarjeta" class="form-control payment-form-control" data-inputmask="'mask': '9999-9999-9999-9999'"  placeholder=" " id="card-number">
-                            <label asp-for="NumeroTarjeta" for="card-number" class="control-label payment-form-label payment-form-label-required">Numero de tarjeta</label>
+                            <input type="text" name="NumeroTarjeta" data-val="true" data-val-required="El número de tarjeta es obligatorio." data-val-creditcard="Por favor, ingrese un número de tarjeta válido." asp-for="NumeroTarjeta" class="form-control payment-form-control" data-inputmask="'mask': '9999-9999-9999-9999'"  placeholder=" " id="card-number"  required maxlength="16" minlength="16" >
+                            <label asp-for="NumeroTarjeta" for="card-number" class="control-label payment-form-label payment-form-label-required" >Numero de tarjeta</label>
                         </div>
 
                         <div class="payment-form-group-flex form-group">
 
                             <div class="payment-form-group">
-                                <input type="text" name="DueDateYYMM" data-val="true" data-val-required="La fecha de vencimiento es obligatoria." data-val-regex="Formato de fecha de vencimiento no válido. Use el formato 'yy/mm.'" asp-for="DueDateYYMM" class="form-control payment-form-control" data-inputmask="'mask': '99/99', 'placeholder': 'yy/mm'"  placeholder=" " id="expiry-date">
-                                <label asp-for="DueDateYYMM" for="expiry-date" class="control-label payment-form-label payment-form-label-required">Expiry Date</label>
+                                <input type="text" name="DueDateYYMM" data-val="true" data-val-required="La fecha de vencimiento es obligatoria." data-val-regex="Formato de fecha de vencimiento no válido. Use el formato 'yy/mm.'" asp-for="DueDateYYMM" class="form-control payment-form-control" data-inputmask="'mask': '99/99', 'placeholder': 'yy/mm'"  placeholder=" " id="expiry-date"  required>
+                                <label asp-for="DueDateYYMM" for="expiry-date" class="control-label payment-form-label payment-form-label-required" >Expiry Date</label>
                             </div>
 
                             <div class="payment-form-group">
-                                <input type="text" name="Cvv" data-val="true" data-val-required="El CVV es obligatorio." data-val-regex="El CVV debe tener 3 dígitos." asp-for="Cvv" class="form-control payment-form-control" data-inputmask="'mask': '999', 'placeholder': '999'"  placeholder=" "  id="cvv">
-                                <label asp-for="Cvv" for="cvv" class="control-label payment-form-label payment-form-label-required">CVV</label>
+                                <input type="text" name="Cvv" data-val="true" data-val-required="El CVV es obligatorio." data-val-regex="El CVV debe tener 3 dígitos." asp-for="Cvv" class="form-control payment-form-control" data-inputmask="'mask': '999', 'placeholder': '999'"  placeholder=" "  id="cvv" required maxlength="3" minlength="3">
+                                <label asp-for="Cvv" for="cvv" class="control-label payment-form-label payment-form-label-required" >CVV</label>
                             </div>
 
                         </div>
