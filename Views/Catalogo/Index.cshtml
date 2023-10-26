@@ -4,6 +4,11 @@
     ViewData["Title"] = "Catalogo | ";
 }
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Poppins:wght@300;400;500&display=swap"
+    rel="stylesheet">
+
     <style>
         .container-catalogo{
             padding-left: 8%;
@@ -17,7 +22,9 @@
             padding-top: 10px;
             padding-bottom: 10px;
             text-align: center;
-            background-color: #bcabae;
+            font-weight: bold;
+             color: #581908;
+            font-family: 'Kanit', sans-serif;
             margin-top: 15px;
             margin-bottom: 15px;
             border-radius: 5px;
@@ -44,9 +51,9 @@
                                     <div class="card-body">
                                         <h5 class="card-title">@Html.DisplayFor(modelItem => item.Name)</h5>
                                         <p class="card-text">S/. @Html.DisplayFor(modelItem => item.Precio)</p>
-                                        <a class="btn btn-link" asp-action="Details" asp-route-id="@item.Id" title="Ver detalles"><i class="fa-solid fa-book" style="color: #000000;"></i></a>
-                                        <a onclick="add()" class="btn btn-link" asp-action="Add" asp-route-id="@item.Id" title="Añadir al carrito"><i class="fa-solid fa-basket-shopping" style="color: #000000;"></i></a>
-                                        <a onclick="add1()" class="btn btn-link" asp-action="Add1" asp-route-id="@item.Id" title="Mis Favoritos"><i class="fa-solid fa-heart" style="color: #000000;"></i></a>
+                                        <a class="btn btn-link" asp-action="Details" asp-route-id="@item.Id" title="Ver detalles"><i class="fa-solid fa-book" style="color: #581908;"></i></a>
+                                        <a onclick="add()" class="btn btn-link" asp-action="Add" asp-route-id="@item.Id" title="Añadir al carrito"><i class="fa-solid fa-basket-shopping" style="color: #581908;"></i></a>
+                                        <a onclick="add1()" class="btn btn-link" asp-action="Add1" asp-route-id="@item.Id" title="Mis Favoritos"><i class="fa-solid fa-heart" style="color: #581908;"></i></a>
                                     </div>
                                 </div>
                             </div> 
