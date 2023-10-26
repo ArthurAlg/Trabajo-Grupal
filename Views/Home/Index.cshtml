@@ -1,8 +1,11 @@
-﻿@{
+﻿@model IEnumerable<Trabajo_Grupal.Models.Producto>
+
+@{
     ViewData["Title"] = "Libreria Reatten | ";
 }
 
 <style>
+
     .carousel {
         position: relative;
         width: 100%;
@@ -47,12 +50,24 @@
     }
 
     
+    .card.mb-3{
+        border-color: #ebf5ee;
+        border-width: 3px;
+    }
+    .container-catalogo .title{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+        background-color: #bcabae;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+    }
 
 </style>
 
 <br>
 <div class="text-center">
-
     <div class="carousel">
         <div class="carousel__wrapper">
             <div class="carousel__container">
@@ -73,11 +88,41 @@
             <br><br>
         </div>
     </div>
-
-
-
-
-
+</div>
+<div class="container-catalogo">
+    <div class="title">
+        <h1>Libros Destacados</h1>
+    </div>
+    <h1>@ViewData["Message"]</h1>
+    <div class="row">
+        <div class="col">
+            <div id="products" class="mb-3">
+                <div class="row">
+                    @foreach (var libro in Model){
+                        <div class="col-sm-4">
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <div class="card-img-actions">
+                                        <img  class="card-img-top" width="100" height="500" src="@libro.ImageName" alt="@libro.ImageName">
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">@Html.DisplayFor(modelItem => libro.Name)</h5>
+                                    <p class="card-text">S/. @Html.DisplayFor(modelItem => libro.Precio)</p>
+                                    <a class="btn btn-link" asp-action="Details" asp-route-id="@libro.Id" title="Ver detalles"><i class="fa-solid fa-book" style="color: #000000;"></i></a>
+                                    <a onclick="add()" class="btn btn-link" asp-action="Add" asp-route-id="@libro.Id" title="Añadir al carrito"><i class="fa-solid fa-basket-shopping" style="color: #000000;"></i></a>
+                                    <a onclick="add1()" class="btn btn-link" asp-action="Add1" asp-route-id="@libro.Id" title="Mis Favoritos"><i class="fa-solid fa-heart" style="color: #000000;"></i></a>
+                                </div>
+                            </div>
+                        </div> 
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
