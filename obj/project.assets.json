@@ -11809,24 +11809,34 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Viru\\.nuget\\packages\\": {}
+    "C:\\Users\\yanne\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\DOCUMENTOS\\PROGRA1-PROYECTO\\Trabajo-Grupal\\Trabajo Grupal.csproj",
+      "projectUniqueName": "C:\\Users\\yanne\\Documents\\GitHub\\Trabajo-Grupal\\Trabajo Grupal.csproj",
       "projectName": "Trabajo Grupal",
-      "projectPath": "D:\\DOCUMENTOS\\PROGRA1-PROYECTO\\Trabajo-Grupal\\Trabajo Grupal.csproj",
-      "packagesPath": "C:\\Users\\Viru\\.nuget\\packages\\",
-      "outputPath": "D:\\DOCUMENTOS\\PROGRA1-PROYECTO\\Trabajo-Grupal\\obj\\",
+      "projectPath": "C:\\Users\\yanne\\Documents\\GitHub\\Trabajo-Grupal\\Trabajo Grupal.csproj",
+      "packagesPath": "C:\\Users\\yanne\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\yanne\\Documents\\GitHub\\Trabajo-Grupal\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Viru\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\yanne\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -11907,7 +11917,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.416\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   },
@@ -11916,7 +11926,7 @@
       "code": "NU1602",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "System 4.1.311.2 does not provide an inclusive lower bound for dependency Newtonsoft.Json. An approximate best match of Newtonsoft.Json 3.5.8 was resolved.",
+      "message": "System 4.1.311.2 no proporciona un límite inferior inclusivo para la dependencia Newtonsoft.Json. Se resolvió una mejor coincidencia aproximada de Newtonsoft.Json 3.5.8.",
       "libraryId": "Newtonsoft.Json",
       "targetGraphs": [
         "net6.0"
@@ -11926,7 +11936,7 @@
       "code": "NU1603",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Trabajo Grupal depends on System (>= 4.0.0) but System 4.0.0 was not found. An approximate best match of System 4.1.311.2 was resolved.",
+      "message": "Trabajo Grupal depende de System (>= 4.0.0), pero no se encontró System 4.0.0. Se resolvió una mejor coincidencia aproximada de System 4.1.311.2.",
       "libraryId": "System",
       "targetGraphs": [
         "net6.0"
@@ -11936,7 +11946,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'System 4.1.311.2' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "message": "El paquete \"System 4.1.311.2\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net6.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
       "libraryId": "System",
       "targetGraphs": [
         "net6.0"

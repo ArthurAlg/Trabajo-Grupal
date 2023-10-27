@@ -8,67 +8,52 @@
     listItemsMiLista = @Model.elementosMiLista;
 }
 
-    <style>
-        .all{
-            margin: 0;
-            padding: 2rem 1.5rem;
-            align-items: center;
-            align-content: center;
-        }
-        
-        .table{
-            text-align: center;
-            align-items: center;
-        }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" src="/Images/loguito.png"/>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/fav.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Trabajo_Grupal.styles.css" asp-append-version="true" />
+</head>
 
-        .cont2{
-            text-align: left;
-        }
-            
-    </style>
+<body>
 
-    <div class="all">
+<div class="wrapper">
+		<h1><i class="fa-solid fa-folder-open" style="color: #581908;"></i> Lista de Favoritos</h1>
+		<div class="project">
+			<div class="shop">
+                @foreach (MiLista item in Model.elementosMiLista) {
+				<div class="box">
 
-        <div class="title">
-            <h1 style="color: #581908;" >Mi lista de deseos</i></h1>
-        </div>
-
-        <div class="tablep">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>
-
-                        </th>
+					<img src="@item.Producto.ImageName" alt="@item.Producto.ImageName" width="100" height="150" />
+					<div class="content">
+                        <div class="txt">
+						<h4>Libro: <td class="cont2">@Html.DisplayFor(modelItem => item.Producto.Name)</td></h4>
+						<h4>Precio: <td>S/.@Html.DisplayFor(modelItem => item.Precio)</td></h4>
                         
-                        <th class="cont2">
-                            @Html.DisplayNameFor(model1 => listItemsMiLista.FirstOrDefault().Producto.Name)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model1 => listItemsMiLista.FirstOrDefault().Producto.Precio)
-                        </th>
-                        <th>
+                        </div>
 
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (MiLista item in Model.elementosMiLista) {
-                        <tr class="cont">
-                            <td><img src="@item.Producto.ImageName" alt="@item.Producto.ImageName" width="80" height="100" /></td>
-                            <td class="cont2">@Html.DisplayFor(modelItem => item.Producto.Name)</td>
-                            <td>S/.@Html.DisplayFor(modelItem => item.Precio)</td>
-                            <td>
-                                    <a class="btn btn-link" asp-action="Add" asp-route-id="@item.Producto.Id"><i class="fa-solid fa-basket-shopping fa-xl" style="color: #581908;"></i></a>
-                                    <a class="btn btn-link" asp-action="Delete" asp-route-id="@item.Id"><i class="fa-solid fa-x fa-xl" style="color: #581908;"></i></a>
-                            </td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
-        </div>
+                        <div class="area-boton">
+                            <a class="btn-area btn btn-link" asp-action="Add" asp-route-id="@item.Producto.Id"><i class="fa-solid fa-basket-shopping fa-xl" style="color: #581908;"></i></a>
+                             <a class="btn-area btn btn-link" asp-action="Delete" asp-route-id="@item.Id"><i class="fa-solid fa-x fa-xl" style="color: #581908;"></i></a> 
+                        
+                        </div>
+                        
+                        
+					</div>
+				</div>
+                }
+				
+				
+			</div>
+			
+		</div>
+	</div>
 
-    
-
-</div>
-
+</body>
+</html>
