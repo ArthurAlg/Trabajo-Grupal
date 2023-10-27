@@ -1,4 +1,21 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+
+@{
+  IList<string> roles = new List<string>();
+
+  IdentityUser identityUser = await Task.Run(() => UserManager.GetUserAsync(User));
+
+  if (identityUser != null)
+  {
+    roles = await Task.Run(() => UserManager.GetRolesAsync(identityUser));
+  }
+
+}
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -11,7 +28,6 @@
     <link rel="stylesheet" href="~/Trabajo_Grupal.styles.css" asp-append-version="true" />
 </head>
 <body>
-
 
   <!-- header principal -->
 
@@ -77,7 +93,6 @@
               </form>
           </div>
           </div>  
-
                
                     <!-- menu start here -->
             <div class="header-item item-center ">
@@ -91,7 +106,15 @@
                 </div>
                   <ul class="menu-main">
                     <li><a class="nav-link text-dark love" asp-area="MisDeseos" asp-controller="MisDeseos" asp-action="Index"> MIS FAVORITOS</a></li>
-                          
+                     
+                     @if (roles.Contains("Admin"))
+                {
+                  <li><a asp-controller="Producto" asp-action="Index">PRODUCTOS</a>
+                  </li>
+                  <li><a asp-controller="Usuario" asp-action="Index">USUARIOS</a>
+                  </li>
+                }     
+ 
                     <li><a asp-area="" asp-controller="Catalogo" asp-action="Index">CATALOGO</a></li>
                           
                     <li class="menu-item-has-children">
