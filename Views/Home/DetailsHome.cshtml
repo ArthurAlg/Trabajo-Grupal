@@ -43,13 +43,20 @@
                 <div class="card-body">
                     <h5 class="card-title">@Html.DisplayFor(model => model.Name)</h5>
                     <p class="card-text">@Html.DisplayFor(model => model.Descripcion)</p>
-                    <h5 class="card-title">Precio: $@Html.DisplayFor(model => model.Precio)</h5>
+                    <h5 class="card-title">Precio: s/.@Html.DisplayFor(model => model.Precio)</h5>
                     <h5 class="card-title">Autor: @Html.DisplayFor(model => model.Autor)</h5>
                     <h5 class="card-title">Genero: @Html.DisplayFor(model => model.Genero)</h5>
+                    <h5 class="card-title">Editorial: @Html.DisplayFor(model => model.Editorial)</h5>
+                    <h5 class="card-title">Paginas: @Html.DisplayFor(model => model.Npag)</h5>
+                    <h5 class="card-title">Idioma: @Html.DisplayFor(model => model.Idioma)</h5>
                     <h5 class="card-title">Año de Publicacion: @Html.DisplayFor(model => model.año)</h5>
-                    <a class="btn btn-primary" asp-action="Add" asp-route-id="@Model.Id">Add</a>
+
+                    <a class="btn btn-link" asp-action="Add" asp-route-id="@Model.Id" title="Añadir al carrito"><i class="fa-solid fa-basket-shopping" style="color: #581908;"></i></a>
+                    <a class="btn btn-link" asp-action="Add1" asp-route-id="@Model.Id" title="Mis Favoritos"><i class="fa-solid fa-heart" style="color: #581908;"></i></a>
+                    
                 </div>
             </div>
         </div>
+    </div>
     </div>
 </div>
