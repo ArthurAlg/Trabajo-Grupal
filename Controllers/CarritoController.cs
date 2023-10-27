@@ -54,18 +54,22 @@ namespace Trabajo_Grupal.Controllers
 
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
+          if (id == null)
+    {
+        return NotFound();
+    }
 
-            var itemproforma = await _context.DataProformas.FindAsync(id);
-            if (itemproforma == null)
-            {
-                return NotFound();
-            }
-            return View(itemproforma);
+    var itemproforma = await _context.DataProformas.Include(p => p.Producto).FirstOrDefaultAsync(p => p.Id == id);
+    if (itemproforma == null)
+    {
+        return NotFound();
+    }
+
+    return View(itemproforma);
         }
+
+        
+
 
         [HttpPost]
         [ValidateAntiForgeryToken]
