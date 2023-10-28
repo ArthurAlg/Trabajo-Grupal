@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Franco Sanchez\\Desktop\\PROYECTO PROGRA\\TrabajoGrupal\\Trabajo-Grupal\\Trabajo Grupal.csproj": {}
+    "c:\\Users\\Franco Sanchez\\Desktop\\PROYECTO PROGRA\\TrabajoGrupal\\Trabajo-Grupal\\Trabajo Grupal.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Franco Sanchez\\Desktop\\PROYECTO PROGRA\\TrabajoGrupal\\Trabajo-Grupal\\Trabajo Grupal.csproj": {
+    "c:\\Users\\Franco Sanchez\\Desktop\\PROYECTO PROGRA\\TrabajoGrupal\\Trabajo-Grupal\\Trabajo Grupal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Franco Sanchez\\Desktop\\PROYECTO PROGRA\\TrabajoGrupal\\Trabajo-Grupal\\Trabajo Grupal.csproj",
+        "projectUniqueName": "c:\\Users\\Franco Sanchez\\Desktop\\PROYECTO PROGRA\\TrabajoGrupal\\Trabajo-Grupal\\Trabajo Grupal.csproj",
         "projectName": "Trabajo Grupal",
-        "projectPath": "C:\\Users\\Franco Sanchez\\Desktop\\PROYECTO PROGRA\\TrabajoGrupal\\Trabajo-Grupal\\Trabajo Grupal.csproj",
+        "projectPath": "c:\\Users\\Franco Sanchez\\Desktop\\PROYECTO PROGRA\\TrabajoGrupal\\Trabajo-Grupal\\Trabajo Grupal.csproj",
         "packagesPath": "C:\\Users\\Franco Sanchez\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Franco Sanchez\\Desktop\\PROYECTO PROGRA\\TrabajoGrupal\\Trabajo-Grupal\\obj\\",
+        "outputPath": "c:\\Users\\Franco Sanchez\\Desktop\\PROYECTO PROGRA\\TrabajoGrupal\\Trabajo-Grupal\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Franco Sanchez\\AppData\\Roaming\\NuGet\\NuGet.Config"
