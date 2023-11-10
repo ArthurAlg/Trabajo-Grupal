@@ -22,6 +22,21 @@ namespace Trabajo_Grupal.Controllers.UI
             return View();
         }
 
+        public IActionResult Direccion()
+        {
+            return View("Direccion");
+        }
+
+        public IActionResult PreguntasFrecuentes()
+        {
+            return View("PreguntasFrecuentes");
+        }
+
+        public IActionResult LibrodeReclamaciones()
+        {
+            return View("LibrodeReclamaciones");
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
