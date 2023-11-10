@@ -5,6 +5,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL;
 using System.Diagnostics;     
 using System.Configuration; 
 using Trabajo_Grupal.Service;
+using Trabajo_Grupal.Integrations;
+using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddHealthChecks();
@@ -27,6 +29,19 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddScoped<ProductoService, ProductoService>();
 
+builder.Services.AddScoped<ITBooksAPIIntegration, ITBooksAPIIntegration>();
+
+//Generar documentacion de la API
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Title = "API",
+        Version = "v1",
+        Description = "Descripcion de la API"
+    });
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -40,6 +55,13 @@ else
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+
+//Generando documentacion de la API
+app.UseSwagger();
+app.UseSwaggerUI(c =>
+{
+    c.SwaggerEndpoint("/Swagger/v1/swagger.json", "API v1");
+});
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();

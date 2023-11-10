@@ -1,6 +1,8 @@
 GET http://localhost:5118/api/producto/
 Accept: application/json
 
-GET http://localhost:5118/api/producto/1
+GET https://jsonplaceholder.typicode.com/todos/
 Accept: application/json
 
+GET https://api.itbook.store/1.0/search/
+Accept: application/json
