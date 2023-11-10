@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace Trabajo_Grupal.Controllers
+namespace Trabajo_Grupal.Controllers.UI
 {
     public class NosotrosController : Controller
     {

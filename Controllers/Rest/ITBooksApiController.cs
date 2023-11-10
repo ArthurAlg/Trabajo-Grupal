@@ -11,7 +11,7 @@ using Trabajo_Grupal.Integrations;
 namespace Trabajo_Grupal.Controllers.Rest
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/search")]
     public class ITBooksApiController : ControllerBase
     {
         private readonly ITBooksAPIIntegration _itbooks;

@@ -9,7 +9,7 @@ using Trabajo_Grupal.Data;
 using Trabajo_Grupal.Models;
 using Trabajo_Grupal.Service;
 
-namespace Trabajo_Grupal.Controllers
+namespace Trabajo_Grupal.Controllers.UI
 {
     public class ProductoController : Controller
     {

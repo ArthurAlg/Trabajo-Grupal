@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+
 using Microsoft.EntityFrameworkCore;
 using Trabajo_Grupal.Data;
 using Trabajo_Grupal.Models;
@@ -11,7 +12,7 @@ using Trabajo_Grupal.Service;
 namespace Trabajo_Grupal.Controllers.Rest
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/producto")]
     public class ProductoApiController : ControllerBase
     {
         private readonly ProductoService _productoService;
