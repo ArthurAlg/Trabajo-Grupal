@@ -1,5 +1,8 @@
 GET http://localhost:5118/api/producto/
 Accept: application/json
 
-GET http://localhost:5118/api/search/
+GET http://localhost:5118/api/new/
+Accept: application/json
+
+GET https://api.itbook.store/1.0/new
 Accept: application/json

@@ -1,37 +1,31 @@
-@model IEnumerable<Trabajo_Grupal.DTO.ITBooksDTO>
+@model Trabajo_Grupal.DTO.SearchResultDTO
 
-@{
-    ViewData["Title"] = "Index";
-}
-
-@using (Html.BeginForm("Search", "ITBooks", FormMethod.Get)){
-    <input type="text" name="searchString" placeholder="Buscar libros"> <!-- Input para ingresar el término de búsqueda -->
-    <input type="submit" value="Buscar"> <!-- Botón de envío del formulario -->
-}
-
-<table>
-    <tr>
-        <th>title</th>
-        <th>subtittle</th>
-        <th>isbn13</th>
-        <th>price</th>
-        <th>ImageName</th>
-        <th>url</th>
-    </tr>
-    @foreach (var book in Model)
-    {
+@if (Model != null && Model.Books != null){
+    <table class="table">
+    <thead>
         <tr>
-            <td>@book.title</td>
-            <td>@book.subtittle</td>
-            <td>@book.isbn13</td>
-            <td>@book.price</td>
-            <td>@book.ImageName</td>
-            <td>@book.url</td>
+            <th>Title</th>
+            <th>Subtitle</th>
+            <th>ISBN13</th>
+            <th>Price</th>
+            <th>Image</th>
+            <th>URL</th>
         </tr>
-    }
+    </thead>
+    <tbody>
+        @foreach (var book in Model.Books)
+        {
+            <tr>
+                <td>@book.title</td>
+                <td>@book.subtitle</td>
+                <td>@book.isbn13</td>
+                <td>@book.price</td>
+                <td>@book.ImageName</td>
+                <td>@book.url</td>
+            </tr>
+        }
+    </tbody>
 </table>
-
-@if (Model == null || !Model.Any())
-{
-    <p>No se encontraron libros.</p>
+}else{
+    <p>No hay datos para mostrar.</p>
 }

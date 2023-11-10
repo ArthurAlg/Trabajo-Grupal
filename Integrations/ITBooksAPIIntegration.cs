@@ -11,7 +11,7 @@ namespace Trabajo_Grupal.Integrations
     public class ITBooksAPIIntegration
     {
         private readonly ILogger<ITBooksAPIIntegration> _logger;
-        private const string API_URL="https://api.itbook.store/1.0/search";
+        private const string API_URL="https://api.itbook.store/1.0/search/mongo";
         private readonly HttpClient httpClient;
 
         public ITBooksAPIIntegration(ILogger<ITBooksAPIIntegration> logger){
@@ -19,24 +19,24 @@ namespace Trabajo_Grupal.Integrations
             httpClient = new HttpClient();
         }
 
-        public async Task<List<ITBooksDTO>> GetBooks(string searchString = null)
+        public async Task<List<SearchResultDTO>> GetBooks()
         {
-            string requestUrl = string.IsNullOrEmpty(searchString) ? API_URL : $"{API_URL}/{searchString}";
+            string requestUrl = $"{API_URL}";
 
-            List<ITBooksDTO> books = new List<ITBooksDTO>();
+            List<SearchResultDTO> searchResult = new List<SearchResultDTO>();
             try
             {
                 HttpResponseMessage response = await httpClient.GetAsync(requestUrl);
                 if (response.IsSuccessStatusCode)
                 {
-                    books = await response.Content.ReadFromJsonAsync<List<ITBooksDTO>>() ?? new List<ITBooksDTO>();
+                    searchResult = await response.Content.ReadFromJsonAsync<List<SearchResultDTO>>() ?? new List<SearchResultDTO>();
                 }
             }
             catch (Exception ex)
             {
                 _logger.LogDebug($"Error al llamar a la API: {ex.Message}");
             }
-            return books;
+            return searchResult;
         }
     }
 }

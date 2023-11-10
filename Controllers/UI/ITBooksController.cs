@@ -21,20 +21,12 @@ namespace Trabajo_Grupal.Controllers.UI
             _logger = logger;
             _itbooks = itbooks;
         }
-        public async Task<IActionResult> Index(string searchString)
+        public async Task<IActionResult> Index()
         {
-            List<ITBooksDTO> books;
+            List<SearchResultDTO> libros = await _itbooks.GetBooks();
 
-            if (!string.IsNullOrEmpty(searchString))
-            {
-                books = await _itbooks.GetBooks(searchString);
-                return View(books);
-            }
-            else
-            {
-                books = await _itbooks.GetBooks();
-                return View(books);
-            }
+            _logger.LogDebug($"Libros encontrados: {libros.Count}");
+            return View(libros.FirstOrDefault());
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
