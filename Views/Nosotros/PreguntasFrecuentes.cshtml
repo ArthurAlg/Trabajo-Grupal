@@ -4,13 +4,74 @@
 
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Preguntas Frecuentes</title>
+    <link rel="stylesheet" href="~/css/prefe.css" asp-append-version="true" />
 </head>
+
 <body>
-    <div class="container">
+    <div class="container-preguntas">
         <h1>Preguntas Frecuentes</h1>
-        <p>Listado de preguntas y respuestas comunes.</p>
+
+        <div class="faq-item">
+            <h3>¿Dónde comprar libros por internet?<span class="arrow">▶</span></h3>
+            <div class="answer">
+                <p>En Reatten.com.pe tu tienda online.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <h3>¿Dónde es más barato comprar libros?<span class="arrow">▶</span></h3>
+            <div class="answer">
+                <p>En Reatten siempre tenemos ofertas y descuentos, puedes suscribirte en nuestro sitio web y enterarte de los lanzamientos.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <h3>¿Existe un servicio similar a Rappi o Indrive para entregas de libros?<span class="arrow">▶</span></h3>
+            <div class="answer">
+                <p>Por el momento no contamos con un servicio extra de envío de delivery.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <h3>¿Si vivo en una ciudad distinta a Lima, puedo comprar en Reatten.com?<span class="arrow">▶</span></h3>
+            <div class="answer">
+                <p>Sí, entregamos a nivel nacional, solo debes comprar en nuestra tienda online.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <h3>¿Tiene todo tipo de libros?<span class="arrow">▶</span></h3>
+            <div class="answer">
+                <p>Sí, no solo tenemos libros de todo tipo de categorías, sino que también contamos con comics, recetas, etc.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <h3>¿De donde proviene su nombre?<span class="arrow">▶</span></h3>
+            <div class="answer">
+                <p>Nuestro nombre proviene de las palabras en inglés "Rea" de "Read" que significa leer y "Tten" del pasado participio "Written", que significa leído. Juntas hacen "Reatten".</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <h3>¿Cuál es el plazo de entrega de los libros?<span class="arrow">▶</span></h3>
+            <div class="answer">
+                <p>En Lima es un plazo máximo de 3 días y a otra ciudad fuera de Lima un plazo de 5 días hábiles.</p>
+            </div>
+        </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".faq-item h3").click(function () {
+                $(this).next(".answer").slideToggle();
+                $(this).find(".arrow").toggleClass("rotate");
+            });
+        });
+    </script>
 </body>
+
 </html>
