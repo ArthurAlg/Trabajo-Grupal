@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/css/paid.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/pago.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/colors.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Trabajo_Grupal.styles.css" asp-append-version="true" />
     <script src="https://unpkg.com/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
@@ -21,92 +21,103 @@
 
 <body>
 
-  <section class="payment-section">
-        <div class="container">
-          <form asp-controller="Pago" asp-action="Pagar" class="payment-form" data-val="true">
-            <div class="payment-wrapper">
-                <div class="payment-left">
-                    <div class="payment-header">
-                        <div class="payment-header-icon"><i class="ri-flashlight-fill"></i></div>
-                        <div class="payment-header-title">Resumen del Pedido</div>
-                        <p class="payment-header-description"></p>
-                    </div>
-                    <div class="payment-content">
-                        <div class="payment-body">
-                            <div class="payment-plan">
-                                <a class="payment-plan-change" asp-action="Index" asp-controller="Carrito">Regresar al carrito</a>
-                                </div>
-                            <div class="payment-summary">
-                                
-                                <div class="payment-summary-divider"></div>
-                                <div class="form-group payment-summary-item payment-summary-total">
-                                    <div class="payment-summary-name"><label asp-for="MontoTotal" class="control-label"></label></div>
-                                    <div class="payment-summary-price"><input asp-for="MontoTotal" class="form-control" data-thousands="," data-decimal="." /></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <div class="container-card">
+
+    <div class="card-container">
+
+        <div class="front">
+            <div class="image">
+                <img src="/Images/chip.png" alt="">
+                <img src="/Images/visa copy.png" alt="">
+            </div>
+            <div class="card-number-box">################</div>
+            <div class="flexbox">
+                <div class="box">
+                    <span>card holder</span>
+                    <div class="card-holder-name">full name</div>
                 </div>
-                <div class="payment-right">
-                    
-                        <h1 class="payment-title">Detalles del Pago</h1>
-                        
-                          <div class="payment-method">
-                              <input type="radio" name="payment-method" id="method-1" checked>
-                              <label for="method-1" class="payment-method-item">
-                                  <img src="/Images/visa.png" alt="">
-                              </label>
-                              <input type="radio" name="payment-method" id="method-2">
-                              <label for="method-2" class="payment-method-item">
-                                  <img src="/Images/mastercard.png" alt="">
-                              </label>
-                              <input type="radio" name="payment-method" id="method-3">
-                              <label for="method-3" class="payment-method-item">
-                                  <img src="/Images/ae.png" alt="">
-                              </label>
-                              <input type="radio" name="payment-method" id="method-4">
-                              <label for="method-4" class="payment-method-item">
-                                  <img src="/Images/dc.png" alt="">
-                              </label>
-                          </div>
-
-                        <div class="form-group payment-form-group">
-                            <input type="hidden" asp-for="UserID"/>
-                            <input type="text" name="NombreTarjeta" id="NombreTarjeta" data-val="true" data-val-required="El nombre de la tarjeta es obligatorio." asp-for="NombreTarjeta" class="form-control payment-form-control"  placeholder=" " required>
-                            <label  asp-for="NombreTarjeta" class="payment-form-label payment-form-label-required control-label" >Nombre de tarjeta</label>
-                        </div>
-
-                        <div class="payment-form-group form-group">
-                            <input type="text" name="NumeroTarjeta" data-val="true" data-val-required="El número de tarjeta es obligatorio." data-val-creditcard="Por favor, ingrese un número de tarjeta válido." asp-for="NumeroTarjeta" class="form-control payment-form-control" data-inputmask="'mask': '9999-9999-9999-9999'"  placeholder=" " id="card-number"  required maxlength="16" minlength="16" >
-                            <label asp-for="NumeroTarjeta" for="card-number" class="control-label payment-form-label payment-form-label-required" >Numero de tarjeta</label>
-                        </div>
-
-                        <div class="payment-form-group-flex form-group">
-
-                            <div class="payment-form-group">
-                                <input type="text" name="DueDateYYMM" data-val="true" data-val-required="La fecha de vencimiento es obligatoria." data-val-regex="Formato de fecha de vencimiento no válido. Use el formato 'yy/mm.'" asp-for="DueDateYYMM" class="form-control payment-form-control" data-inputmask="'mask': '99/99', 'placeholder': 'yy/mm'"  placeholder=" " id="expiry-date"  required>
-                                <label asp-for="DueDateYYMM" for="expiry-date" class="control-label payment-form-label payment-form-label-required" >Expiry Date</label>
-                            </div>
-
-                            <div class="payment-form-group">
-                                <input type="text" name="Cvv" data-val="true" data-val-required="El CVV es obligatorio." data-val-regex="El CVV debe tener 3 dígitos." asp-for="Cvv" class="form-control payment-form-control" data-inputmask="'mask': '999', 'placeholder': '999'"  placeholder=" "  id="cvv" required maxlength="3" minlength="3">
-                                <label asp-for="Cvv" for="cvv" class="control-label payment-form-label payment-form-label-required" >CVV</label>
-                            </div>
-
-                        </div>
-
-                        <div class="form-group">
-                            <button type="submit" class="btn payment-form-submit-button"><i class="ri-wallet-line"></i> Pagar</button>
-                        </div>
-                        
-                    </form>
-                    <h1>@ViewData["Message"]</h1>
-                    
+                <div class="box">
+                    <span>expires</span>
+                    <div class="expiration">
+                        <span class="exp-month">mm</span>
+                        <span class="exp-year">yy</span>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
 
+        <div class="back">
+            <div class="stripe"></div>
+            <div class="box">
+                <span>cvv</span>
+                <div class="cvv-box"></div>
+                <img src="image/visa.png" alt="">
+            </div>
+        </div>
+
+    </div>
+
+    <form asp-controller="Pago" asp-action="Pagar" class="payment-form" data-val="true">
+        <div class="inputBox">
+            <span>card number</span>
+            <input type="text" name="NumeroTarjeta" asp-for="NumeroTarjeta"  maxlength="16" minlength="16"  class="card-number-input" required>
+        </div>
+
+        <div class="inputBox">
+            <span>card holder</span>
+            <input type="hidden" asp-for="UserID"/>
+            <input type="text" name="NombreTarjeta" asp-for="NombreTarjeta"  class="card-holder-input" required>
+        </div>
+        <div class="flexbox">
+            <div class="inputBox">
+                <span>expiration mm</span>
+                <select name="" id="" class="month-input">
+                    <option value="month" selected disabled>month</option>
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+            </div>
+            <div class="inputBox">
+                <span>expiration yy</span>
+                <select name="" id="" class="year-input">
+                    <option value="year" selected disabled>year</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+                    <option value="2027">2027</option>
+                    <option value="2028">2028</option>
+                    <option value="2029">2029</option>
+                    <option value="2030">2030</option>
+                </select>
+            </div>
+            <div class="inputBox">
+                <span>cvv</span>
+                <input type="text" name="Cvv" asp-for="Cvv"  class="cvv-input" required maxlength="3" minlength="3">
+            </div>
+        </div>
+        <div class="inputBox">
+            <div class="payment-summary-name"><label asp-for="MontoTotal" class="control-label"></label></div>
+            <div class="payment-summary-price"><input asp-for="MontoTotal" class="form-control" data-thousands="," data-decimal="." /></div>
+        </div>
+        <input type="submit" value="PAGAR" class="submit-btn">
+    </form>
+    <h1>@ViewData["Message"]</h1>
+
+</div>    
+    
+
+<script src="~/js/pago.js" asp-append-version="true"></script>
 
 </body>
 </html>
