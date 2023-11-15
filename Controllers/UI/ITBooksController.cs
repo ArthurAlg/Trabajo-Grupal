@@ -23,10 +23,12 @@ namespace Trabajo_Grupal.Controllers.UI
         }
         public async Task<IActionResult> Index()
         {
-            List<SearchResultDTO> libros = await _itbooks.GetBooks();
+            List<SearchResultDTO> searchResults = await _itbooks.GetBooks();
 
-            _logger.LogDebug($"Libros encontrados: {libros.Count}");
-            return View(libros.FirstOrDefault());
+            List<BookDTO> books = searchResults.SelectMany(result => result.Books).ToList();
+
+            _logger.LogDebug($"Libros encontrados: {books.Count}");
+            return View(books);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
