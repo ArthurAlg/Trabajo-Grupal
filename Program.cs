@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.Configuration; 
 using Trabajo_Grupal.Service;
 using Trabajo_Grupal.Integrations;
+using Newtonsoft;
 using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -28,6 +29,8 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddScoped<ProductoService, ProductoService>();
+builder.Services.AddScoped<ContactanosService, ContactanosService>();
+builder.Services.AddScoped<PedidoService, PedidoService>();
 
 builder.Services.AddScoped<ITBooksAPIIntegration, ITBooksAPIIntegration>();
 

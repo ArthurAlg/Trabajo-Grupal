@@ -1,8 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
-using System.Text.Json.Serialization;
+using Microsoft.Extensions.Logging;
 using System.Text.Json;
 using Trabajo_Grupal.DTO;
 
@@ -23,20 +24,23 @@ namespace Trabajo_Grupal.Integrations
         {
             string requestUrl = $"{API_URL}";
 
-            List<SearchResultDTO> searchResult = new List<SearchResultDTO>();
+            List<SearchResultDTO> searchResults = new List<SearchResultDTO>();
             try
             {
                 HttpResponseMessage response = await httpClient.GetAsync(requestUrl);
                 if (response.IsSuccessStatusCode)
                 {
-                    searchResult = await response.Content.ReadFromJsonAsync<List<SearchResultDTO>>() ?? new List<SearchResultDTO>();
+                    using (Stream contentStream = await response.Content.ReadAsStreamAsync())
+                    {
+                        searchResults = await JsonSerializer.DeserializeAsync<List<SearchResultDTO>>(contentStream);
+                    }
                 }
             }
             catch (Exception ex)
             {
                 _logger.LogDebug($"Error al llamar a la API: {ex.Message}");
             }
-            return searchResult;
+            return searchResults;
         }
     }
 }

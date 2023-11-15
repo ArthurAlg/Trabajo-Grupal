@@ -1,39 +1,35 @@
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using Trabajo_Grupal.Data;
 using Trabajo_Grupal.Models;
-
+using Trabajo_Grupal.Service;
 
 namespace Trabajo_Grupal.Controllers.UI
 {
     public class ContactanosController : Controller
     {
-        private readonly ILogger<ContactanosController> _logger;
-        private readonly ApplicationDbContext _context;
+        private readonly ContactanosService _contactanosService;
 
-        public ContactanosController(ILogger<ContactanosController> logger,
-        ApplicationDbContext context)
+        public ContactanosController(ContactanosService contactanosService)
         {
-            _logger = logger;
-            _context = context;
+            _contactanosService = contactanosService;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
             return View();
         }
 
         [HttpPost]
-        public IActionResult Create(Contacto objContacto)
+        public async Task<IActionResult> Create(Contacto objContacto)
         {
-            _context.Add(objContacto);
-            _context.SaveChanges();
-            ViewData["Message"] = string.Concat("Estimado " , objContacto.Name, " , te estaremos contactando pronto.");
+            var contactos = await _contactanosService.Crear(objContacto);
+            ViewData["Message"] = string.Concat("Estimado " , contactos.Name, " , te estaremos contactando pronto.");
             return View("Index");
         }
 
@@ -41,6 +37,6 @@ namespace Trabajo_Grupal.Controllers.UI
         public IActionResult Error()
         {
             return View("Error!");
-        }
-    }
+        }
+    }
 }
