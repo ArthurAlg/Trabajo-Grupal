@@ -32,6 +32,14 @@ namespace Trabajo_Grupal.Controllers.UI
             return View(listapedido);
         }
 
+        public IActionResult DetallesPedido(int pedidoId)
+        {
+            
+            var detallesPedido = _pedidoService.ObtenerDetallesPedido(pedidoId);
+
+            return PartialView("DetallesPedido", detallesPedido);
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {   

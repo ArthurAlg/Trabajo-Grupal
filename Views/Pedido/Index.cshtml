@@ -33,6 +33,11 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Status)
             </td>
+            <td>
+    
+
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Pedido" asp-action="DetallesPedido" asp-route-pedidoId="@item.ID" title="Ver detalles"><i class="fa-solid fa-book" style="color: #581908;"></i></a>
+            </td>
         </tr>
 }
     </tbody>

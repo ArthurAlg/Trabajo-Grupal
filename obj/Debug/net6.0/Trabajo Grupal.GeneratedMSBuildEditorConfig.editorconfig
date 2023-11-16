@@ -80,12 +80,32 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWlzRGVzZW9zXGluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/yanne/Documents/GitHub/Trabajo-Grupal/Views/Nosotros/Direccion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9zb3Ryb3NcRGlyZWNjaW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/yanne/Documents/GitHub/Trabajo-Grupal/Views/Nosotros/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9zb3Ryb3NcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/yanne/Documents/GitHub/Trabajo-Grupal/Views/Nosotros/LibrodeReclamaciones.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9zb3Ryb3NcTGlicm9kZVJlY2xhbWFjaW9uZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yanne/Documents/GitHub/Trabajo-Grupal/Views/Nosotros/PreguntasFrecuentes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9zb3Ryb3NcUHJlZ3VudGFzRnJlY3VlbnRlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/yanne/Documents/GitHub/Trabajo-Grupal/Views/Pago/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnb1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yanne/Documents/GitHub/Trabajo-Grupal/Views/Pedido/DetallesPedido.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvXERldGFsbGVzUGVkaWRvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yanne/Documents/GitHub/Trabajo-Grupal/Views/Pedido/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/yanne/Documents/GitHub/Trabajo-Grupal/Views/Producto/Create.cshtml]

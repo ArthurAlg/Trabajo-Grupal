@@ -38,6 +38,15 @@ namespace Trabajo_Grupal.Service
             return listapedido;
         }
 
+        public List<DetallePedido> ObtenerDetallesPedido(int pedidoId)
+        {
+            return _context.DataDetallePedido
+                .Include(detalle => detalle.pedido)  // Incluye la propiedad de navegación pedido
+                .Where(detalle => detalle.pedido != null && detalle.pedido.ID == pedidoId)
+                .ToList();
+        }
+
+
         public async Task<List<Pedido?>> Get(string? userID)
         {
             if (userID == null || _context.DataPedido == null)
