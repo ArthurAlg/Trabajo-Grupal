@@ -40,21 +40,13 @@
             var userID = '@User.Identity.Name';
             if (!userID || userID === '') {
                 mostrarPopup('Por favor, debe loguearse antes de añadir al carrito.');
-            } else {
-                // Lógica para añadir al carrito
-                // ...
             }
-        }
 
         function addToFavorites() {
             var userID = '@User.Identity.Name';
             if (!userID || userID === '') {
                 mostrarPopup('Por favor, debe loguearse antes de agregar a favoritos.');
-            } else {
-                // Lógica para agregar a favoritos
-                // ...
             }
-        }
     </script>
 }
 <div class="container-detalle">
@@ -85,8 +77,8 @@
                     <h5 class="card-title">Idioma: @Html.DisplayFor(model => model.Idioma)</h5>
                     <h5 class="card-title">Año de Publicacion: @Html.DisplayFor(model => model.año)</h5>
 
-                    <a class="btn btn-link" href="#" onclick="addToCart()" title="Añadir al carrito"><i class="fa-solid fa-basket-shopping" style="color: #581908;"></i></a>
-                    <a class="btn btn-link" href="#" onclick="addToFavorites()" title="Mis Favoritos"><i class="fa-solid fa-heart" style="color: #581908;"></i></a>
+                    <a class="btn btn-link" asp-action="Add" asp-route-id="@Model.Id" title="Añadir al carrito"><i class="fa-solid fa-basket-shopping" style="color: #581908;"></i></a>
+                    <a class="btn btn-link" asp-action="Add1" asp-route-id="@Model.Id" title="Mis Favoritos"><i class="fa-solid fa-heart" style="color: #581908;"></i></a>
                     
                 </div>
             </div>
