@@ -47,8 +47,6 @@ namespace Trabajo_Grupal.Controllers.UI
         public async Task<IActionResult> Add(int? id){
             var userID = _userManager.GetUserName(User);
             if(userID == null){
-                //no se ha logueado
-                 ViewData["Message"] = "Por favor debe loguearse antes de agregar un producto";
                 List<Producto> productos = new List<Producto>();
                 return  View("Index",productos);
             }else{

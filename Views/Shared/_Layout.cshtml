@@ -57,12 +57,12 @@
                 </div>
 
                 <div class="container-form col-7 pl-0">
-                    <form method="post" class="searchForm d-flex" >
-                    <input name="searchString" class="form-control me-2" type="search" placeholder="Buscar libro ..." aria-label="Search"/>
+                  <form method="post" class="searchForm d-flex " >
+                  <input name="searchString" class="form-control me-2" type="search" placeholder="Buscar libro ..." aria-label="Search"/>
                     <button class="btn-search">
-                        <i class="fa-solid fa-magnifying-glass" style="color: #581908;"></i>
+                      <i class="fa-solid fa-magnifying-glass" style="color: #581908;"></i>
                     </button>
-                    </form>
+                  </form>
                 </div>
                 <div class="container-user">
                     <partial name="_LoginPartial" />
@@ -113,10 +113,12 @@
                   </li>
                   <li><a asp-controller="Usuario" asp-action="Index">USUARIOS</a>
                   </li>
+                  <li><a asp-area="" asp-controller="ITBooks" asp-action="Index">ITBooks</a>
+                  </li>
                   
                 }     
                     
-                    <li><a asp-area="" asp-controller="ITBooks" asp-action="Index">ITBooks</a></li>
+                    
                     <!--<li><a asp-controller="ITBooks" asp-action="Index">ITBooks</a></li>-->
                     <li><a asp-area="" asp-controller="Catalogo" asp-action="Index">CATÁLOGO</a></li>
                           

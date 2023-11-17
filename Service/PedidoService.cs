@@ -41,6 +41,7 @@ namespace Trabajo_Grupal.Service
         public List<DetallePedido> ObtenerDetallesPedido(int pedidoId)
         {
             return _context.DataDetallePedido
+                .Include(detalle => detalle.Producto)
                 .Include(detalle => detalle.pedido)  // Incluye la propiedad de navegación pedido
                 .Where(detalle => detalle.pedido != null && detalle.pedido.ID == pedidoId)
                 .ToList();
