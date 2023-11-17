@@ -32,7 +32,7 @@ body {
 
 :root{
   --primary-color: #581908;
-  --background-color: #ffe1dc;
+  --background-color: rgb(255, 245, 220);
   --second-color: #F5C116;
 }
 
